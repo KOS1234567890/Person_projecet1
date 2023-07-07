@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+body{
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-family:'Montserrat';
+}
+p,figure,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ul,li{
+    list-style-type: none;
+    margin:0; padding:0;
+    color: black;
+}
+*{
+    box-sizing: border-box;
+}
+footer{
+    font-family: 'Noto Sans KR', sans-serif;
+}
