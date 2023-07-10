@@ -46,6 +46,7 @@
 }
 
 main {
+  overflow: hidden;
   background-color: #F5FAF2;
 }
 
@@ -374,6 +375,7 @@ footer .footer2 div {
 @media (max-width: 1280px) {
   html {
     font-size: 1vw;
+    width: 100%;
   }
   .header {
     font-size: 0.8rem;
@@ -511,4 +513,4 @@ footer .footer2 div {
     margin-top: 1rem;
     color: gray;
   }
-}
+}/*# sourceMappingURL=publicity.css.map */

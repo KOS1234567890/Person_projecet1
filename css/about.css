@@ -4,6 +4,10 @@ body {
   margin: 0 auto;
 }
 
+main {
+  overflow: hidden;
+}
+
 article {
   margin: 0 5rem;
 }
@@ -530,6 +534,7 @@ footer .footer2 div {
     margin-left: 1rem;
   }
   .contain_bg {
+    overflow: hidden;
     padding-left: 3rem;
     background-size: 100% 100%;
   }
@@ -1005,4 +1010,4 @@ footer .footer2 div {
     margin-top: 1rem;
     color: gray;
   }
-}
+}/*# sourceMappingURL=about.css.map */

@@ -67,7 +67,9 @@
     //     transform: translateY(10rem);
     // }
 } 
+body{}
 main{
+    overflow: hidden;
     background-color: #F5FAF2;
 }
 .main4{
@@ -363,6 +365,7 @@ footer{
 @media(max-width:1280px){
     html{
         font-size: 1vw;
+        width: 100%;
     }
     .header{
         font-size: 0.8rem;

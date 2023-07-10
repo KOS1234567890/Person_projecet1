@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url("./basic.css");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+main {
+  overflow: hidden;
+}
+
 .header {
   background-color: rgba(240, 240, 240, 0.502);
   color: black;
@@ -572,6 +576,9 @@ footer .footer2 div {
   html {
     font-size: 1vw;
   }
+  main {
+    overflow: hidden;
+  }
   .header {
     font-size: 0.8rem;
     padding: 0 2rem;
@@ -636,6 +643,7 @@ footer .footer2 div {
     height: 60vh;
   }
   .Rental_Guide {
+    width: auto;
     height: auto;
     margin: 8rem 2rem 0 5rem;
   }
@@ -661,6 +669,7 @@ footer .footer2 div {
     font-size: 0.5rem;
   }
   .Rental_Features {
+    width: auto;
     height: auto;
     margin: 8rem 2rem 0 5rem;
   }
@@ -687,6 +696,7 @@ footer .footer2 div {
     display: block;
   }
   .more {
+    width: 90%;
     height: auto;
     margin: 6rem 2rem 0 5rem;
   }
@@ -795,9 +805,6 @@ footer .footer2 div {
     font-size: 1.5rem;
     width: 100%;
   }
-  .Rental_Features .ul_group {
-    width: 100vw;
-  }
   .Rental_Features .ul_group .ul_list1 .list1, .Rental_Features .ul_group .ul_list2 .list1, .Rental_Features .ul_group .ul_list3 .list1, .Rental_Features .ul_group .ul_list4 .list1, .Rental_Features .ul_group .ul_list5 .list1 {
     width: 80%;
     border-radius: 0px 15px 15px 15px;
@@ -825,6 +832,9 @@ footer .footer2 div {
   .more {
     height: auto;
     margin: 6rem 2rem 0 5rem;
+  }
+  .more .more_1 {
+    width: 100%;
   }
   footer {
     position: relative;
@@ -860,4 +870,4 @@ footer .footer2 div {
     margin-top: 1rem;
     color: gray;
   }
-}
+}/*# sourceMappingURL=industries.css.map */

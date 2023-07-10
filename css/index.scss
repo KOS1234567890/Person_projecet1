@@ -15,6 +15,7 @@
 body{
     margin: 0 auto;
     width: 100%;
+    
 }
 article{
     margin: 0 5rem;
@@ -81,8 +82,8 @@ article{
 
 .rotateO{
     background:#000000 url('../image/main_view/mainVisual.png') no-repeat;
+    background-size: cover;
     width: 100%;
-    
     height: 100vh;
     @include flex(center,center){}
     text-align: center;
@@ -173,15 +174,13 @@ article{
     .img_01{ 
         position: absolute;
         right: 25%;
-        height: 100%;
+        top: 50%;
         width: 1.5rem;
         img{
             padding: 1.5rem;
             border-radius: 5rem;
             background-color: #2F765F ;
             object-fit: cover;
-            float: right;
-            transform: translate(1410px,200px);
         }
     }
 }  
@@ -399,6 +398,10 @@ footer{
 @media (max-width:1280px) {
     html{
         font-size: 1vw;
+        
+    }
+    body{
+        
     }
     .header{
         font-size: 0.8rem;
@@ -484,6 +487,7 @@ footer{
         }
         //화살표
         .img_01{ 
+            display: none;
             position: static;
             
             width: 1.5rem;
@@ -492,14 +496,12 @@ footer{
                 border-radius: 5rem;
                 background-color: #2F765F ;
                 object-fit: cover;
-                float: right;
-                transform: translate(1410px,200px);
             }
         }
     }
     .EASY1{
         width: auto;
-        height: 150vh;
+        height: auto;
         
         h2{
             width: 100%;
@@ -673,6 +675,18 @@ footer{
                     font-size: 50px;
                     margin-top: 70vh;
                 }
+            }
+        }
+        .img_01{ 
+            display: none;
+            position: static;
+            
+            width: 1.5rem;
+            img{
+                padding: 1.5rem;
+                border-radius: 5rem;
+                background-color: #2F765F ;
+                object-fit: cover;
             }
         }
     }

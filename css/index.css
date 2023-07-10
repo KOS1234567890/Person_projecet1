@@ -56,6 +56,7 @@ article {
 
 .rotateO {
   background: #000000 url("../image/main_view/mainVisual.png") no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -164,7 +165,7 @@ article {
 .slide100 .img_01 {
   position: absolute;
   right: 25%;
-  height: 100%;
+  top: 50%;
   width: 1.5rem;
 }
 .slide100 .img_01 img {
@@ -173,8 +174,6 @@ article {
   background-color: #2F765F;
   -o-object-fit: cover;
      object-fit: cover;
-  float: right;
-  transform: translate(1410px, 200px);
 }
 
 .EASY1 h2 {
@@ -482,6 +481,7 @@ footer .footer2 div {
     padding: 1.5rem;
   }
   .slide100 .img_01 {
+    display: none;
     position: static;
     width: 1.5rem;
   }
@@ -491,12 +491,10 @@ footer .footer2 div {
     background-color: #2F765F;
     -o-object-fit: cover;
        object-fit: cover;
-    float: right;
-    transform: translate(1410px, 200px);
   }
   .EASY1 {
     width: auto;
-    height: 150vh;
+    height: auto;
   }
   .EASY1 h2 {
     width: 100%;
@@ -655,6 +653,18 @@ footer .footer2 div {
     font-size: 50px;
     margin-top: 70vh;
   }
+  .slide100 .img_01 {
+    display: none;
+    position: static;
+    width: 1.5rem;
+  }
+  .slide100 .img_01 img {
+    padding: 1.5rem;
+    border-radius: 5rem;
+    background-color: #2F765F;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .EASY1 {
     width: 80%;
     height: 100%;
@@ -785,4 +795,4 @@ footer .footer2 div {
     margin-top: 1rem;
     color: gray;
   }
-}
+}/*# sourceMappingURL=index.css.map */
