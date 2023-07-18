@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>publicity</title>
     <link rel="stylesheet" href="./css/publicity.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script defer src="./js/header.js"></script>
+    <script defer src="./js/footer.js"></script>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div class="header">
             <div>
                 <a href="./index.html">
@@ -30,7 +34,7 @@
                 <p>MENU</p>
             </div>
         </div>
-    </header>
+    </header> -->
     <main>
         <div class="main4">
             <div class="main4_title">
@@ -72,18 +76,24 @@
             </div>
             
         </div>
-        <div class="movie4">
+        <div class="movie4 swiper mySwiper">
             <div class="movie4_title">
                 <h2>에코버 대용량 공기청정 살균기</h2>
                 <p>강력한 산화력에 의해 <br>
                     각종 세균과 바이러스를 99% 살균 제거</p>
             </div>
-            <div class="movie4_main">
-                <video src="./video/movie_3.mp4" controls poster="./image/Publicity_view/poster3.png"></video>
-                <video src="./video/movie_2.mp4" controls poster="./image/Publicity_view/poster2.png"></video>
-                <video src="./video/movie_1.mp4" controls poster="./image/Publicity_view/forest_poster.png"></video>
+            <div class="movie4_main swiper-wrapper">
+                <figure class="swiper-slide">
+                    <video src="./video/movie_1.mp4" controls poster="./image/Publicity_view/forest_poster.png"></video>
+                </figure>
+                <figure class="swiper-slide">
+                    <video src="./video/movie_2.mp4" controls poster="./image/Publicity_view/poster2.png"></video>
+                </figure>
+                <figure class="swiper-slide">
+                    <video src="./video/movie_3.mp4" controls poster="./image/Publicity_view/poster3.png"></video>
+                </figure>
             </div>
-            <div class="circle4">
+            <div class="circle4 swiper-pagination">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -127,7 +137,21 @@
             
         </div>
     </main>
-    <footer>
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+    </script>
+    <!-- <footer>
         <div class="footer1">
             <figure>
                 <a href="./index.html"><img src="./image/main_view/logo_easylental.svg" alt="LOGO" href="./index.html"></a>
@@ -189,6 +213,6 @@
                 </p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>

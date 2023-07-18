@@ -21,21 +21,20 @@ article{
     margin: 0 5rem;
 }
 .header{
-    background-color: rgba(240, 240, 240, 0.502);
+    background-color: rgba(240, 240, 240, 0.8);
     color: black;
     width: 100%;
     height: 7rem;
     font-size: 1rem;
     padding: 0 5rem;
+    z-index: 20;
     @include flex(center,space-between){
     flex-direction: row;
     margin: 1rem;
     }
-    position: relative;
-    top: 0;
     margin: 0 auto;
-    z-index: 1;
-
+    position: fixed; left: 0; top: 0;
+    transition: 1s;
     
     div{
         a{
@@ -78,33 +77,64 @@ article{
     //     transition: 1s;
     //     transform: translateY(10rem);
     // }
+    
 } 
-
+.header.active{
+    transform: translateY(-7rem);
+}
 .rotateO{
-    background:#000000 url('../image/main_view/mainVisual.png') no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    @include flex(center,center){}
-    text-align: center;
-    color: white;
-    p{
-        font-size: 8rem;
-        
-        img{
-            letter-spacing: 1rem;
-            width: 6rem;
-            margin: 0;
-            animation: Oro 60s infinite;
-            animation-delay: 0s;
-            @keyframes Oro {
-                100%{rotate: 900deg;}
+    .circle{
+        color: white;
+        background :url('../image/main_view/mainVisual.png') no-repeat;
+        background-size: cover;
+        clip-path: circle(287.205px at 50% 50%);
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        p{
+            transform: translateY(50%);
+            font-size: 8rem;
+            img{
+                letter-spacing: 1rem;
+                width: 6rem;
+                margin: 0;
+                animation: Oro 60s infinite;
+                animation-delay: 0s;
+                @keyframes Oro {
+                    100%{rotate: 900deg;}
+                }
+            }
+            b{
+                
+                font-size: 2rem;
             }
         }
-        b{
-            font-size: 1rem;
+        
+    }
+    
+    background:rgb(240, 240, 240) ;
+    background-size: cover;
+    width: 100%;
+    height: 150vh;
+    // @include flex(center,center){}
+    text-align: center;
+    color: black;
+    .active{
+        .circle{
+            clip-path: circle(50% at 50% 50%);
+            p{
+                font-size: 3rem;
+            }
+            b{
+                font-size:1rem;
+            }
+            img{
+                width: 3rem;
+            }
         }
     }
+    
     
 }
 
@@ -112,63 +142,122 @@ article{
 .slide100{
     position: relative;
     width: 100%; height: 100vh;
-    background: #d2d4e2 url('../image/main_view/health_bg.png')  no-repeat left;
+    
     background-size: 75% 100vh;
     //background-image: url('../image/main_view/ecover_bg.png'),url('../image/main_view/easy_bg.png');
     
     .b1{
+        // overflow: hidden;
         position: absolute;
         width: 75%;
-        article{
-            margin:0 auto;
-            position: absolute;
-            left: 0;
-            color: white;
-            .b2{
-                margin: 5rem 0 0 5rem;
-                h2{font-size: 1.5rem;margin-left: 40px;}
-                p{font-size: 1.1rem;margin-left: 40px;}
+        height: 100%;
+            .swiper-wrapper{
+                display: flex;
+                height: 100vh;
+                margin:0 auto;
+                position: absolute;
+                left: 0;
+                color: white;
+                article{
+                    width: 100%;
+                    flex-shrink: 0;
+                    height: 100%;
+                    margin: 0rem;
+                    color: white;
+                    background: #d2d4e2 url('../image/main_view/health_bg.png')  no-repeat left;
+                    // overflow: hidden;
+                    background-size: cover;
+                    .b2{
+                        padding: 5rem 0 0 5rem;
+                        h2{font-size: 1.5rem;margin-left: 40px;}
+                        p{
+                            img{
+                                padding-top: 3rem;
+                                filter: brightness(0) invert(1);
+                            }
+                            font-size: 1.1rem;margin-left: 40px;
+                        }
+                    }
+                    
+                    span{
+                        margin-left: 6rem;
+                        font-size:7rem;
+                        margin-top: 13rem;
+                        color: rgba(204, 204, 204,0.6);
+                        @include flex(center,flex-start){}}
+                }
             }
-            
-            span{
-                margin-left: 6rem;
-                font-size:7rem;
-                margin-top: 13rem;
-                color: rgba(204, 204, 204,0.6);
-                @include flex(center,flex-start){}}
+        article:nth-of-type(2){
+            background:  url('../image/main_view/easy_bg.png') no-repeat left;
+            background-size: cover;
+        }
+        article:nth-of-type(3){
+            background: url('../image/main_view/ecover_bg.png') no-repeat left;
+            background-size: cover;
         }
     }
     .a1{
+        background-color: #d2d4e2;
         width: 25%;
         position: absolute;
-        top: 5rem;
         right: 0;
         height: 100%;
         
-        .a2{
-            position: absolute;
+        .mySwiper2{
+            height: 6rem;
+            overflow: hidden;
+            .a2{
+                position: relative;
+                padding-top: 4rem;
+                height: 2rem;
+                left: 50px;
+                
+                p{  } 
+            }
             
-            left: 50px;
-            p{padding: 20% 0 0 0;} 
-            hr{background: #283593; height:1px; border:0;
-                width:180%;
-                transform: translateX(-8rem);
-            }    
         }
+        hr{background: #283593; height:1px; border:0;
+            transform: translateX(-8rem) ;
+        }    
         color: #283593;       
-        
-        .a4{
-            @include flex(center,center){}
-            img{padding: 40% 0;}
-        }
-        .a3{
-            position: absolute;
-            bottom: 10rem;
-            left: 50px;
-            p{padding: 50% 0 0 0;
+        .mySwiper1{
+            width: 100%;
+            transform: translateY(75%);
+            overflow: hidden;
+            .a4{
+                width: 100vw;
+                padding-left: 10rem;
+                
+                @include flex(center,normal){    flex-wrap: nowrap;}
+                figure{
+                    width: 100%;
+                    // width: 0%;
+                    img{width: 10rem;}
+                }
                 
             }
-        }    
+        }
+        .mySwiper3{
+            position: absolute;
+            bottom: 0; left: 50px;
+            height: 10%;
+            overflow: hidden;
+            .a3{
+                
+                position: relative;
+                @include flex(normal,flex-end){
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
+                p{
+                    
+                }
+            } 
+        }
+        .swpier-wrapper {
+            transition-timing-function: linear;
+          }
+           
     }
     //화살표
     .img_01{ 
@@ -242,11 +331,12 @@ article{
             width: 100%;
             color: gray;
         }
-        a{
-            li::before{
+        li{
+            a::before{
                 content: '2023.04.XX';
             }
-            li{
+            a{
+                color: black;
                 position: relative;
                 top: 0;
                 margin: 2rem 0;
@@ -254,48 +344,46 @@ article{
                 @include flex(center,space-between){
                     flex-direction: row;
                     overflow: hidden;
-                    
                 }
+            }
+            a.lidown{
                 
             }
-
-            li::after{
+            a::after{
                 color: darkgray;
                 content:'MORE+'
             }
             p{
+                text-align: center;
+                margin: 5rem;
                 display: none;
             }
         }
-        li:hover{
-            p{}
-            height: 200%;
-            
-        }
+        
     }
 }
 //보도자료
 .bodo1{
+    overflow: hidden;
     margin-top: 5rem;
-    margin-bottom:5rem;
     h2{
         display: block;
     }
     
     .bodo2{
-        
         @include flex(flex-start,space-between){
             flex-direction: row;
-            
+            flex-wrap: nowrap;
         }
         span{
             @include flex(center,space-between){
                 flex-direction: row;
-                
+                flex-shrink: 0;
             }
-            width: 45%;
-            hr{width: 100%; margin: 3rem 0;}
+            width: 50%;
+            hr{width: 90%; margin: 3rem 0;}
             figure{
+                width: 90%;
                 @include flex(center,flex-start){
                     flex-direction: row;
                     gap: 1rem;
@@ -305,7 +393,7 @@ article{
                     width: 72%;
                     b{ font-size: 1.9rem;}
                     p{margin: 1rem 0;}
-                    a{text-decoration: underline; }
+                    a{text-decoration: underline; color: gray;}
                 }
             }
         }
@@ -319,7 +407,10 @@ article{
             display: inline-block;
             border-radius: 50%;
             border: 1px solid #000;
-
+            margin-right: 0.5rem;
+        }
+        span:hover{
+            background-color: black;
         }
     }
 }

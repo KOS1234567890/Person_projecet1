@@ -4,10 +4,6 @@ body {
   margin: 0 auto;
 }
 
-main {
-  overflow: hidden;
-}
-
 article {
   margin: 0 5rem;
 }
@@ -58,6 +54,7 @@ article {
 }
 
 .contain_bg {
+  overflow: hidden;
   background: url("../image/about_view/company_visual2.png") no-repeat;
   background-size: 100%;
   width: 100%;
@@ -193,6 +190,7 @@ article {
 }
 .information .img1 img {
   width: 30%;
+  height: 50%;
   position: absolute;
   right: 4rem;
   top: 4rem;
@@ -1010,4 +1008,4 @@ footer .footer2 div {
     margin-top: 1rem;
     color: gray;
   }
-}/*# sourceMappingURL=about.css.map */
+}
