@@ -11,7 +11,10 @@
 
     @content;
 }
-
+html{
+    font-size: 1vw;
+    
+}
 body{
     margin: 0 auto;
     width: 100%;
@@ -71,7 +74,26 @@ article{
         }
     }
     .menu_m{
-           display: none; 
+        display: none; 
+        vertical-align: middle;
+        p{}
+        ul{
+            display: none; 
+            position: fixed; left: 0; top: 0;
+            width: 100%; height: 20%;
+            background-color: #fff;
+
+            transform: translateY(-200%);
+            transition: 1s;
+
+            li{
+                
+                font-size: 2rem;
+            }
+            @include flex(center,center){
+
+            }
+           }
     }
     // &:hover{
     //     transition: 1s;
@@ -80,24 +102,56 @@ article{
     
 } 
 .header.active{
-    transform: translateY(-7rem);
+    transform: translateY(-100%);
 }
+
 .rotateO{
+    width: 100%;
+    position: relative;
+    background:rgb(240, 240, 240) ;
+    background-size: cover;
+    height: 200vh;
+    // @include flex(center,center){}
+    text-align: center;
+    color: black;
     .circle{
         color: white;
-        background :url('../image/main_view/mainVisual.png') no-repeat;
-        background-size: cover;
-        clip-path: circle(287.205px at 50% 50%);
+        /* background :url('../image/main_view/mainVisual.png') no-repeat;
+        background-size: cover; */
         width: 100%;
         height: 100vh;
         position: fixed;
+        background: #f0f0f0;
         left: 0;
-        p{
-            transform: translateY(50%);
-            font-size: 8rem;
+        .bg_cp{     // bg,clip-path,width,height
+            width: 100%;
+            height:100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            clip-path: circle(400px at 50% 50%);
+            @include flex(center,center){
+            }
+            background :url('../image/main_view/mainVisual.png') no-repeat;
+        background-size: cover;
+        }
+        .center{  //txt
+            mix-blend-mode: difference;
+            color: white;
+            font-size: 14.5rem;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height:100%;
+            align-content: center;
+            @include flex(center,center){
+            }
+           
             img{
                 letter-spacing: 1rem;
-                width: 6rem;
+                width: 11rem;
                 margin: 0;
                 animation: Oro 60s infinite;
                 animation-delay: 0s;
@@ -106,36 +160,14 @@ article{
                 }
             }
             b{
-                
+                width: 100%;
                 font-size: 2rem;
+                
             }
+
         }
         
     }
-    
-    background:rgb(240, 240, 240) ;
-    background-size: cover;
-    width: 100%;
-    height: 150vh;
-    // @include flex(center,center){}
-    text-align: center;
-    color: black;
-    .active{
-        .circle{
-            clip-path: circle(50% at 50% 50%);
-            p{
-                font-size: 3rem;
-            }
-            b{
-                font-size:1rem;
-            }
-            img{
-                width: 3rem;
-            }
-        }
-    }
-    
-    
 }
 
     
@@ -224,18 +256,7 @@ article{
             width: 100%;
             transform: translateY(75%);
             overflow: hidden;
-            .a4{
-                width: 100vw;
-                padding-left: 10rem;
-                
-                @include flex(center,normal){    flex-wrap: nowrap;}
-                figure{
-                    width: 100%;
-                    // width: 0%;
-                    img{width: 10rem;}
-                }
-                
-            }
+            
         }
         .mySwiper3{
             position: absolute;
@@ -254,10 +275,27 @@ article{
                 }
             } 
         }
+        .mySwiper4{
+            overflow: hidden;
+            
+            .a4{
+                @include flex(center,flex-start){
+                    flex-wrap: nowrap;
+                }
+                p{
+                    img{
+                        object-position: center;
+                        object-fit: none;
+                        width: 25vw;
+                        height: 80vh;
+                    }
+
+                }
+            }
+        }
         .swpier-wrapper {
             transition-timing-function: linear;
-          }
-           
+          }   
     }
     //화살표
     .img_01{ 
@@ -332,16 +370,18 @@ article{
             color: gray;
         }
         li{
-            a::before{
-                content: '2023.04.XX';
+            
+            overflow: hidden;
+            .date{
+                margin-right: 10rem;
             }
             a{
                 color: black;
                 position: relative;
                 top: 0;
-                margin: 2rem 0;
-                padding-left: 0;
-                @include flex(center,space-between){
+                margin: 1rem 0;
+                padding: 1rem 0rem;
+                @include flex(center,flex-start){
                     flex-direction: row;
                     overflow: hidden;
                 }
@@ -351,15 +391,27 @@ article{
             }
             a::after{
                 color: darkgray;
-                content:'MORE+'
+                content:'MORE+';
+                position: absolute;
+                right: 0;
+                top: 1rem;
             }
             p{
-                text-align: center;
-                margin: 5rem;
+                transition: .5s;
                 display: none;
+                margin: 2rem;
+                margin-right: 3rem;
+                margin-left: 14.5rem;
             }
         }
-        
+        li:hover{
+
+            p{
+                padding: 1px;
+                display: block;
+                transition: .5s;
+            }
+        }
     }
 }
 //보도자료
@@ -512,6 +564,32 @@ footer{
             display: block;
             font-size: 16px;
             margin-left: 1rem;
+            ul{
+                width: 100%;
+                
+            }
+        }
+        
+        
+    }
+    .header:hover{
+        z-index:1;
+        .menu_m{
+            display: block; 
+            margin-left: 1rem;
+            ul{
+                display: block;
+
+                transform: translateY(0%);
+                transition: 1s;
+                opacity: 1;
+                z-index: -1;
+
+                font-size: 3rem;
+            @include flex(center,center){
+
+            }
+            }
         }
     }
     .rotateO{
@@ -524,8 +602,6 @@ footer{
         }
     }
     .slide100{
-        position: static;
-        background: #d2d4e2 url('../image/main_view/health_bg.png')  no-repeat;
         background-size: 100% 100vh;
         //background-image: url('../image/main_view/ecover_bg.png'),url('../image/main_view/easy_bg.png');
         
@@ -548,40 +624,71 @@ footer{
             }
         }
         .a1{
-            position: static;
+            position: absolute;
             width: 100%;
-            height: 40rem;
+            height: 50rem;
             background-color: rgb(210, 212, 226);
-            .a2{
-                position: static;
-                p{padding: 3rem 0 0 3rem; font-size: 2rem;} 
-                hr{
-                    width:90%;
-                    transform: translateX(0rem);
-                }    
-            }             
-            .a4{
-                position: static;
-                @include flex(center,flex-start){}
-                img{
-                    padding:  3rem 1.5rem ;
-                    width: 33rem;
-                }
+            .mySwiper2{
+                .a2{
+                    padding-top: 0rem;
+                    p{padding: 3rem 0 0 3rem; font-size: 2rem;} 
+                }             
             }
-            .a3{
-                @include flex(center,flex-end){}
-                position: static;
-                p{padding: 1.5rem;
-                    
+            hr{
+                width:90%;
+                transform: translateX(0rem);
+            } 
+            .mySwiper1{
+                transform: translateY(0);
+                .a4{
+                    // @include flex(center,flex-start){
+                    //     flex-wrap: nowrap;
+                    // }
+                    // position: static;
+                    figure{
+                        // width: 100%;
+                        img{
+                            padding:  3rem 1.5rem ;
+                            width: 20rem;
+                        }
+
+                    }
                 }
-            }    
+
+            } 
+            .mySwiper3{
+                .a3{
+                    @include flex(center,flex-end){}
+                    position: static;
+                    p{padding: 1.5rem;
+                        
+                    }
+                }    
+            } 
+            .mySwiper4{
+                overflow: hidden;
+                
+                .a4{
+                    @include flex(center,flex-start){
+                        flex-wrap: nowrap;
+                    }
+                    p{
+                        img{object-position: center;
+                            object-fit: none;
+                            width: 100vw;
+                            height: 40vh;
+                        }
+    
+                    }
+                }
+            } 
         }
         //화살표
         .img_01{ 
-            display: none;
-            position: static;
-            
-            width: 1.5rem;
+            right: auto;
+            top: auto;
+            width: 100%;
+            transform: translate(50%, -50%);
             img{
                 padding: 1.5rem;
                 border-radius: 5rem;
@@ -628,7 +735,7 @@ footer{
         }
     }
     .bodo1{
-        
+        width: 100%;
         margin-top: 5rem;
         margin-bottom: 5rem;
         h2{
@@ -636,13 +743,14 @@ footer{
         }
         
         .bodo2{
+            
             margin-top: 0;
             @include flex(flex-start,space-between){
                 flex-direction: row;
-                
+                flex-wrap: nowrap;
             }
             span{
-                @include flex(center,space-between){
+                @include flex(center,center){
                     flex-direction: row;
                     
                 }

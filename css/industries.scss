@@ -1,6 +1,5 @@
 @import url("./basic.css");
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
 @mixin flex($a,$j){
     display: flex;
     flex-wrap: wrap;
@@ -13,21 +12,20 @@ main{
     overflow: hidden;
 }
 .header{
-    background-color: rgba(240, 240, 240, 0.502);
+    background-color: rgba(240, 240, 240, 0.8);
     color: black;
     width: 100%;
     height: 7rem;
     font-size: 1rem;
     padding: 0 5rem;
+    z-index: 20;
     @include flex(center,space-between){
     flex-direction: row;
     margin: 1rem;
     }
-    position: relative;
-    top: 0;
     margin: 0 auto;
-    z-index: 1;
-
+    position: fixed; left: 0; top: 0;
+    transition: 1s;
     
     div{
         a{
@@ -64,13 +62,36 @@ main{
         }
     }
     .menu_m{
-           display: none; 
+        display: none; 
+        vertical-align: middle;
+        p{}
+        ul{
+            display: none; 
+            position: fixed; left: 0; top: 0;
+            width: 100%; height: 20%;
+            background-color: #fff;
+
+            transform: translateY(-200%);
+            transition: 1s;
+
+            li{
+                
+                font-size: 2rem;
+            }
+            @include flex(center,center){
+
+            }
+           }
     }
     // &:hover{
     //     transition: 1s;
     //     transform: translateY(10rem);
     // }
+    
 } 
+.header.active{
+    transform: translateY(-100%);
+}
 .main3{
     width: 95%;     height: auto;
     .main3_bg{
@@ -85,17 +106,40 @@ main{
             background: url('../image/Industries_view/easyrental_visual2.png') no-repeat left;
             background-size: 100% 100%;
             border-radius: 5rem;
+            animation: Imgbg 3s ;
+            
+        }
+        @keyframes Imgbg{
+            0%{width:100%;}
+            100%{width:45%;}
         }
         .txt{
-            position: absolute;
-            left: 50%;
-            bottom: 20%;
-            color: #ffffff;
+            animation: txtup 3s 2s forwards;
+            
             h2{
                 
             }
             p{
 
+            }
+        }
+        @keyframes txtup{
+            0%{
+                position: absolute;
+                left: 50%;
+                bottom: 20%;
+                
+                display: block;
+                transform: translateY(100%);
+                color: #2F765F;
+            }
+            100%{
+                position: absolute;
+                left: 50%;
+                bottom: 20%;
+                display: block;
+                transform: translateY(0%);
+                color: white;
             }
         }
     }
@@ -131,11 +175,39 @@ main{
 ol{
     padding-left: 0;
     li{
+        background-color: #FAFAFA;
+        width: 100%;height:auto;
+        
+        .box1{
+            border:1px solid #000000 ;
+            border-width: 0px 0px 2px 0px ;
+            padding: 1.5rem;
+            margin-top: 0;
+            margin: 0 1.5rem ;
+            @include flex(center,space-between){
+                }
+                
+            .box_txt{
+                @include flex(center,flex-start){
+                      gap: 10rem;
+                    }
+                .box1_p{
+                    h1{}
+                }
+                .b1{
+                    b{}
+                }
+            }
+        }
+        .box1::after{
+            content: "↓";
+        }
         .main3_Pli{
-            position: relative;
             
+            position: relative;
             background-color: #FAFAFA;
             width: 100%;height:100vh;
+            
             .main3_Plf{
                 position: absolute;
                 left: 5%;top:10%;
@@ -158,6 +230,7 @@ ol{
                     ul{
                         @include flex(flex-start,flex-start){
                             gap: 3rem;
+                                flex-wrap: nowrap;
                         }
                         li{
                             a{ color: #a1a1a1; font-size: 1.2rem;}
@@ -184,7 +257,7 @@ ol{
                 }
             }
             .main3_Prg{
-                
+
                 position: absolute;
                 right: 5%;top:10%;
                 width: 40%;height: 80vh;
@@ -227,6 +300,13 @@ ol{
                 
             }
         }
+        .main3_Pli.off{
+            display: none;
+            transition: 1s;
+        }
+        .main3_Pli.on{
+            display: block;
+        }
     }
 }
 .OSRS{
@@ -238,12 +318,20 @@ ol{
             font-size: 4.5rem;
             color: #2F765F;
             text-align: center;
-            
+            animation: smallOSRS 5s;
+        }
+        @keyframes smallOSRS{
+            0%{    letter-spacing: 1rem;}
+            100%{letter-spacing: 0rem;}
         }
         img{
             width: 100%;
+            animation: imgwidth 5s;
         }
-    
+        @keyframes imgwidth{
+            0%{transform: scale(1.2);}
+            100%{transform: scale(1);}
+        }
 }
 .Rental_Guide{
     width: 100%; height: 70vh;
@@ -311,7 +399,6 @@ ol{
                 }
             }
             .RG_cc1{
-                transform: translateX(-20rem);
                 .RG_ccp{
                     transform: translate(20rem,-3rem);
                     display: inline-block;
@@ -324,23 +411,29 @@ ol{
     }
 }
 .Rental_Features{
-    width: 100%; height: auto; margin: 5rem ;
+    width: 100%; height: 100%; margin: 5rem ;
     .RG_1{
         width: 100%;
         h2{font-size: 2rem;}
         hr{width: 13%; margin-left: 0;  border-color: #000000; margin-bottom: 5rem;} 
     }
     .ul_group{
-        width: 100%;
+        position: relative;
+        width: 100%; height: 100%;
         @include flex(center,normal){
             flex-direction: row;
         }
+        
         .ul_list1,.ul_list2,.ul_list3,.ul_list4,.ul_list5{
+            transition: 1s;
             position: relative;
+            opacity: 0.5;
+            left: 1200px;
             width: 19%;
+            //위치 지정
+            margin-right: -300px;
             .list1{
                 width: 100%; height: 50vh;
-                
                 padding: 3rem;
                 color: #FFF;
                 border-radius: 0px 90px 45px 45px;
@@ -373,6 +466,7 @@ ol{
             }
         }
         .ul_list1{
+            
             background-color: #245847;
             border-radius: 0px 90px 45px 45px;
             z-index: 5;
@@ -382,7 +476,7 @@ ol{
             background-size: 10%;
         }
         .ul_list2{
-            transform: translateX(-2rem);
+            
             background-color: #2F765F;
             border-radius: 0px 90px 45px 45px;
             z-index: 4;
@@ -392,7 +486,7 @@ ol{
             background-size: 10%;
         }
         .ul_list3{
-            transform: translateX(-4rem);
+            
             background-color: #408670;
             border-radius: 0px 90px 45px 45px;
             z-index: 3;
@@ -402,7 +496,7 @@ ol{
             background-size: 8%;
         }
         .ul_list4{
-            transform: translateX(-6rem);
+            
             background-color: #4F9880;
             border-radius: 0px 90px 45px 45px;
             z-index: 2;
@@ -412,7 +506,7 @@ ol{
             background-size: 10%;
         }
         .ul_list5{
-            transform: translateX(-8rem);
+            
             background-color: #5CA990;
             border-radius: 0px 90px 45px 45px;
             z-index: 1;
@@ -421,6 +515,27 @@ ol{
             background-repeat: no-repeat;
             background-size: 10%;
         }
+    }
+    .aos-animate >.ul_list1{
+        opacity: 1;
+        
+        margin-left: -1200px;
+    }
+    .aos-animate >.ul_list2{
+        opacity: 1;
+        margin-left: 280px;
+    }
+    .aos-animate >.ul_list3{
+        opacity: 1;
+        margin-left: 280px;
+    }
+    .aos-animate >.ul_list4{
+        opacity: 1;
+        margin-left: 280px;
+    }
+    .aos-animate >.ul_list5{
+        opacity: 1;
+        margin-left: 280px;
     }
 }
 
@@ -549,6 +664,32 @@ footer{
             display: block;
             font-size: 16px;
             margin-left: 1rem;
+            ul{
+                width: 100%;
+                
+            }
+        }
+        
+        
+    }
+    .header:hover{
+        z-index:1;
+        .menu_m{
+            display: block; 
+            margin-left: 1rem;
+            ul{
+                display: block;
+
+                transform: translateY(0%);
+                transition: 1s;
+                opacity: 1;
+                z-index: -1;
+
+                font-size: 3rem;
+            @include flex(center,center){
+
+            }
+            }
         }
     }
     .main3{
@@ -620,13 +761,13 @@ footer{
         .RG_2{
             margin-left: -5rem;
             ul{
+                margin-left: 10rem;
                 .RG_cc1,.RG_cc2,.RG_cc3,.RG_cc4,.RG_cc5{
                     width: 25rem;
                     height: 25rem;
                 }
                 flex-wrap: nowrap;
                 .RG_cc1{
-                    transform: translateX(-24.5rem);
                    
                     .RG_ccp{
                         transform: translate(24rem, -10rem);
@@ -652,8 +793,13 @@ footer{
             width: 100%;
             justify-content: space-around;
             .ul_list1,.ul_list2,.ul_list3,.ul_list4,.ul_list5{
+                left:0px; margin:0;
                 .list1{
-                    padding: 2rem;
+                    
+                    // padding: 2rem;
+                    span{
+
+                    }
                     
                 }
                 .list1 > ul > li{

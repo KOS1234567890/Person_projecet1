@@ -9,21 +9,20 @@
     @content;
 }
 .header{
-    background-color: rgba(240, 240, 240, 0.502);
+    background-color: rgba(240, 240, 240, 0.8);
     color: black;
     width: 100%;
     height: 7rem;
     font-size: 1rem;
     padding: 0 5rem;
+    z-index: 20;
     @include flex(center,space-between){
     flex-direction: row;
     margin: 1rem;
     }
-    position: relative;
-    top: 0;
     margin: 0 auto;
-    z-index: 1;
-
+    position: fixed; left: 0; top: 0;
+    transition: 1s;
     
     div{
         a{
@@ -60,13 +59,36 @@
         }
     }
     .menu_m{
-           display: none; 
+        display: none; 
+        vertical-align: middle;
+        p{}
+        ul{
+            display: none; 
+            position: fixed; left: 0; top: 0;
+            width: 100%; height: 20%;
+            background-color: #fff;
+
+            transform: translateY(-200%);
+            transition: 1s;
+
+            li{
+                
+                font-size: 2rem;
+            }
+            @include flex(center,center){
+
+            }
+           }
     }
     // &:hover{
     //     transition: 1s;
     //     transform: translateY(10rem);
     // }
+    
 } 
+.header.active{
+    transform: translateY(-100%);
+}
 body{}
 main{
     overflow: hidden;
@@ -389,6 +411,32 @@ footer{
             display: block;
             font-size: 16px;
             margin-left: 1rem;
+            ul{
+                width: 100%;
+                
+            }
+        }
+        
+        
+    }
+    .header:hover{
+        z-index:1;
+        .menu_m{
+            display: block; 
+            margin-left: 1rem;
+            ul{
+                display: block;
+
+                transform: translateY(0%);
+                transition: 1s;
+                opacity: 1;
+                z-index: -1;
+
+                font-size: 3rem;
+            @include flex(center,center){
+
+            }
+            }
         }
     }
     .main4{    height: auto;

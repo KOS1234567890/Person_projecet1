@@ -6,22 +6,24 @@ main {
 }
 
 .header {
-  background-color: rgba(240, 240, 240, 0.502);
+  background-color: rgba(240, 240, 240, 0.8);
   color: black;
   width: 100%;
   height: 7rem;
   font-size: 1rem;
   padding: 0 5rem;
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   margin: 1rem;
-  position: relative;
-  top: 0;
   margin: 0 auto;
-  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 1s;
 }
 .header ul {
   margin-left: auto;
@@ -48,6 +50,29 @@ main {
 }
 .header .menu_m {
   display: none;
+  vertical-align: middle;
+}
+.header .menu_m ul {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+  transform: translateY(-200%);
+  transition: 1s;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.header .menu_m ul li {
+  font-size: 2rem;
+}
+
+.header.active {
+  transform: translateY(-100%);
 }
 
 .main3 {
@@ -69,12 +94,36 @@ main {
   background: url("../image/Industries_view/easyrental_visual2.png") no-repeat left;
   background-size: 100% 100%;
   border-radius: 5rem;
+  animation: Imgbg 3s;
+}
+@keyframes Imgbg {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 45%;
+  }
 }
 .main3 .main3_bg .txt {
-  position: absolute;
-  left: 50%;
-  bottom: 20%;
-  color: #ffffff;
+  animation: txtup 3s 2s forwards;
+}
+@keyframes txtup {
+  0% {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    display: block;
+    transform: translateY(100%);
+    color: #2F765F;
+  }
+  100% {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    display: block;
+    transform: translateY(0%);
+    color: white;
+  }
 }
 .main3 .main3_ex {
   position: relative;
@@ -112,6 +161,32 @@ main {
 
 ol {
   padding-left: 0;
+}
+ol li {
+  background-color: #FAFAFA;
+  width: 100%;
+  height: auto;
+}
+ol li .box1 {
+  border: 1px solid #000000;
+  border-width: 0px 0px 2px 0px;
+  padding: 1.5rem;
+  margin-top: 0;
+  margin: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+ol li .box1 .box_txt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10rem;
+}
+ol li .box1::after {
+  content: "↓";
 }
 ol li .main3_Pli {
   position: relative;
@@ -155,6 +230,7 @@ ol li .main3_Pli .main3_Plf .main3_Plf_top ul {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 3rem;
+  flex-wrap: nowrap;
 }
 ol li .main3_Pli .main3_Plf .main3_Plf_top ul li a {
   color: #a1a1a1;
@@ -230,6 +306,13 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+ol li .main3_Pli.off {
+  display: none;
+  transition: 1s;
+}
+ol li .main3_Pli.on {
+  display: block;
+}
 
 .OSRS {
   width: 100%;
@@ -240,9 +323,27 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   font-size: 4.5rem;
   color: #2F765F;
   text-align: center;
+  animation: smallOSRS 5s;
+}
+@keyframes smallOSRS {
+  0% {
+    letter-spacing: 1rem;
+  }
+  100% {
+    letter-spacing: 0rem;
+  }
 }
 .OSRS img {
   width: 100%;
+  animation: imgwidth 5s;
+}
+@keyframes imgwidth {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .Rental_Guide {
@@ -334,9 +435,6 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   background-image: url("../image/Industries_view/arrow.svg");
   rotate: 90deg;
 }
-.Rental_Guide .RG_2 ul .RG_cc1 {
-  transform: translateX(-20rem);
-}
 .Rental_Guide .RG_2 ul .RG_cc1 .RG_ccp {
   transform: translate(20rem, -3rem);
   display: inline-block;
@@ -346,7 +444,7 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
 
 .Rental_Features {
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 5rem;
 }
 .Rental_Features .RG_1 {
@@ -362,7 +460,9 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   margin-bottom: 5rem;
 }
 .Rental_Features .ul_group {
+  position: relative;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -370,8 +470,12 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   flex-direction: row;
 }
 .Rental_Features .ul_group .ul_list1, .Rental_Features .ul_group .ul_list2, .Rental_Features .ul_group .ul_list3, .Rental_Features .ul_group .ul_list4, .Rental_Features .ul_group .ul_list5 {
+  transition: 1s;
   position: relative;
+  opacity: 0.5;
+  left: 1200px;
   width: 19%;
+  margin-right: -300px;
 }
 .Rental_Features .ul_group .ul_list1 .list1, .Rental_Features .ul_group .ul_list2 .list1, .Rental_Features .ul_group .ul_list3 .list1, .Rental_Features .ul_group .ul_list4 .list1, .Rental_Features .ul_group .ul_list5 .list1 {
   width: 100%;
@@ -414,7 +518,6 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   background-size: 10%;
 }
 .Rental_Features .ul_group .ul_list2 {
-  transform: translateX(-2rem);
   background-color: #2F765F;
   border-radius: 0px 90px 45px 45px;
   z-index: 4;
@@ -424,7 +527,6 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   background-size: 10%;
 }
 .Rental_Features .ul_group .ul_list3 {
-  transform: translateX(-4rem);
   background-color: #408670;
   border-radius: 0px 90px 45px 45px;
   z-index: 3;
@@ -434,7 +536,6 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   background-size: 8%;
 }
 .Rental_Features .ul_group .ul_list4 {
-  transform: translateX(-6rem);
   background-color: #4F9880;
   border-radius: 0px 90px 45px 45px;
   z-index: 2;
@@ -444,7 +545,6 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   background-size: 10%;
 }
 .Rental_Features .ul_group .ul_list5 {
-  transform: translateX(-8rem);
   background-color: #5CA990;
   border-radius: 0px 90px 45px 45px;
   z-index: 1;
@@ -452,6 +552,26 @@ ol li .main3_Pli .main3_Prg .main3_Prg_bottom span a {
   background-position: right 2rem bottom 2rem;
   background-repeat: no-repeat;
   background-size: 10%;
+}
+.Rental_Features .aos-animate > .ul_list1 {
+  opacity: 1;
+  margin-left: -1200px;
+}
+.Rental_Features .aos-animate > .ul_list2 {
+  opacity: 1;
+  margin-left: 280px;
+}
+.Rental_Features .aos-animate > .ul_list3 {
+  opacity: 1;
+  margin-left: 280px;
+}
+.Rental_Features .aos-animate > .ul_list4 {
+  opacity: 1;
+  margin-left: 280px;
+}
+.Rental_Features .aos-animate > .ul_list5 {
+  opacity: 1;
+  margin-left: 280px;
 }
 
 .more {
@@ -599,6 +719,28 @@ footer .footer2 div {
     font-size: 16px;
     margin-left: 1rem;
   }
+  .header .menu_m ul {
+    width: 100%;
+  }
+  .header:hover {
+    z-index: 1;
+  }
+  .header:hover .menu_m {
+    display: block;
+    margin-left: 1rem;
+  }
+  .header:hover .menu_m ul {
+    display: block;
+    transform: translateY(0%);
+    transition: 1s;
+    opacity: 1;
+    z-index: -1;
+    font-size: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
   .main3 {
     height: 100%;
   }
@@ -655,14 +797,12 @@ footer .footer2 div {
     margin-left: -5rem;
   }
   .Rental_Guide .RG_2 ul {
+    margin-left: 10rem;
     flex-wrap: nowrap;
   }
   .Rental_Guide .RG_2 ul .RG_cc1, .Rental_Guide .RG_2 ul .RG_cc2, .Rental_Guide .RG_2 ul .RG_cc3, .Rental_Guide .RG_2 ul .RG_cc4, .Rental_Guide .RG_2 ul .RG_cc5 {
     width: 25rem;
     height: 25rem;
-  }
-  .Rental_Guide .RG_2 ul .RG_cc1 {
-    transform: translateX(-24.5rem);
   }
   .Rental_Guide .RG_2 ul .RG_cc1 .RG_ccp {
     transform: translate(24rem, -10rem);
@@ -681,8 +821,9 @@ footer .footer2 div {
     width: 100%;
     justify-content: space-around;
   }
-  .Rental_Features .ul_group .ul_list1 .list1, .Rental_Features .ul_group .ul_list2 .list1, .Rental_Features .ul_group .ul_list3 .list1, .Rental_Features .ul_group .ul_list4 .list1, .Rental_Features .ul_group .ul_list5 .list1 {
-    padding: 2rem;
+  .Rental_Features .ul_group .ul_list1, .Rental_Features .ul_group .ul_list2, .Rental_Features .ul_group .ul_list3, .Rental_Features .ul_group .ul_list4, .Rental_Features .ul_group .ul_list5 {
+    left: 0px;
+    margin: 0;
   }
   .Rental_Features .ul_group .ul_list1 .list1 > ul > li, .Rental_Features .ul_group .ul_list2 .list1 > ul > li, .Rental_Features .ul_group .ul_list3 .list1 > ul > li, .Rental_Features .ul_group .ul_list4 .list1 > ul > li, .Rental_Features .ul_group .ul_list5 .list1 > ul > li {
     font-size: 1.3rem;

@@ -11,77 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script defer src="./js/header.js"></script>
+    <script defer src="./js/index.js"></script>
 </head>
 <body>
-    <!-- <header>
-        <div class="header">
-            <div>
-                <a href="./index.html">
-                    <img src="./image/main_view/logo.svg" alt="LOGO">
-                </a>
-            </div>
-            <ul>
-                <li ><a href="./about.html"> 회사소개</a></li>
-                <li ><a href="./industries.html"> 사업분야</a></li>
-                <li ><a href="./publicity.html"> 홍보센터</a></li>
-            </ul>
-            <div class="select_m">
-                <select name="lan_btn" id="">
-                    <option value="./index.html">KO</option>
-                    <option value="EN">EN</option>
-                </select>
-            </div>
-            <div class="menu_m">
-                <p>MENU</p>
-            </div>
-        </div>
-    </header> -->
     
     <main>
         <div class="rotateO">
             <div class="circle">
-                <p>EASY <br>
-                NETW
-                <img src="./image/main_view/circle.svg" alt="O">
-                RKS <br>
-                <b>㈜이지네트웍스는 고객과의 신뢰와 사회적 가치 창출을 최우선으로 생각합니다.</b></p>
+                <p class="center">   <!-- 플렉스 중앙정렬 -->
+                    <span> EASY </span>
+                    <span> NETW
+                    <img src="./image/main_view/circle.svg" alt="O">
+                    RKS </span>
+                    <br>
+                    <b>㈜이지네트웍스는 고객과의 신뢰와 사회적 가치 창출을 최우선으로 생각합니다.</b>
+                </p>
+                <div class="bg_cp">
+                   <!--  bg,clip-path,width,height -->
+                </div>
             </div>
         </div>
-        <style>
-            .rotateO.active{background-color: black;}
-            .rotateO.active p{ font-size: 3rem;}
-            .rotateO.active b{ font-size:.5rem;}
-            .rotateO.active img{width: 3rem;}
-            .rotateO img{transition: 3s;}
-            .rotateO p{transition: 3s;}
-            .rotateO b{transition: 3s;}
-            .rotateO{transition: 3s;}
-        </style>
-        <script>
-            const elrotatesmall=document.querySelector('.rotateO'),
-                    elcircle1 =document.querySelector('.circle'),
-                    elfontsize=document.querySelector('.circle p'),
-                    elimgsize=document.querySelector('.circle img'),
-                    elB=document.querySelector('.circle p b'),
-                    elslide100=document.querySelector('.slide100');
-            let num={a:0,b:0,status:true};
-            
-            window.addEventListener('scroll',function(){
-                let yy= window.pageYOffset*0.01;
-                let y2=window.pageYOffset*0.005;
-                
-                if (yy<=15.121 && 1.5<yy) {
-                    elcircle1.style=(`clip-path: circle(${15*yy}% at 50% 50%);`);
-                    elfontsize.style=(`font-size:${9-(y2)}vw; `);
-                    elimgsize.style=(`width:${8.5-(y2)}vw`);
-                    elB.style=(`font-size:${6-(y2)}vw;`);
-                }else if(yy>=15.5){
-                    elcircle1.style=(`position: relative;`);
-                    return 0;
-                }
-            })
-        </script>
+        
+      
 <!-- 이미지 80% -->
 <!-- swiper < seiper-wrapper < -->
         <div class="slide100">
@@ -127,17 +80,17 @@
                     
                 </div>
                 <hr>
-                <div class="swiper mySwiper1">
+                <div class="swiper mySwiper4">
                     <div class="a4 swiper-wrapper">
-                        <figure class="swiper-slide" >
+                        <p class="swiper-slide" >
                             <img src="./image/main_view/healthcare.png" alt="machine">
-                        </figure>
-                        <figure class="swiper-slide" >
+                        </p>
+                        <p class="swiper-slide" >
                             <img src="./image/main_view/easylental.png" alt="machine">
-                        </figure>
-                        <figure class="swiper-slide" >
+                        </p>
+                        <p class="swiper-slide" >
                             <img src="./image/main_view/ecover.png" alt="machine">
-                        </figure>
+                        </p>
                     </div>
                 </div>
                 <div class="swiper mySwiper3">
@@ -152,48 +105,7 @@
             <p class="img_01 swiper-button-next"><img src="./image/main_view/arrow.svg" alt="arrow"></p>
         </div>  
         
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-        <script>
-            
-            var swiper = new Swiper(".mySwiper1", {
-                autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-                },
-                navigation: {
-                nextEl: ".swiper-button-next",
-                },
-            });
-            var swiper = new Swiper(".mySwiper2", { //세로슬라이드
-                direction: "vertical",
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                },
-            });
-            var swiper = new Swiper(".mySwiper3", {
-                direction: "vertical",
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                },
-            });
-        </script>
+       
 
 
         <article class="EASY1">
@@ -233,25 +145,37 @@
                 </a>
             </div>
         </article>
+        <!-- 공지사항 -->
         <article class="public1">
             <h2>공지사항</h2>
             <hr>
             <ul class="list_down">
                 <li>
                     <a href="#">
+                        <div class="date">
+                            2023.04.XX
+                        </div>
                         이지네트웍스의 공기질 관리 브랜드 에코버(ECOVER)의 공기순환기 'X1200' 조달청 제품 등록
                         <p>이지네트웍스의 공기질 관리 브랜드 에코버(ECOVER)의 신제품인 공기순환기 'X1200'이 조달청 제품으로 등록되었습니다. 앞으로 관공서와 학교, 전철역, 체육관 등 공공기관 입찰에 참여할 수 있게 되었습니다. </p>
                     </a>
                 </li>
                 <hr>
                 <li>
-                    <a href="#">삼성전자 장기경영상(10년) 상패
+                    <a href="#">
+                    <div class="date">
+                        2023.04.XX
+                    </div>
+                    삼성전자 장기경영상(10년) 상패
                     <p>에코버의 공기순환기 'X1200'은 전열교환 소자가 탑재되어 여름에는 실외 더운 공기의 열을 뺏고, 겨울에는 따뜻한 실내 공기의 열을 뺏어 실외 차가운 공기를 덥혀 들여와 실내 냉·난방 손실을 줄이는 효과가 있는 제품으로, 최대 풍량이 시간 당 1200m³로 대용량인 점을 자랑합니다. 또한 사용되는 헤파필터는 이지네트웍스의 경기도 파주 공장에서 자체 생산됩니다. </p>
                     </a>
                 </li>
                 <hr>
                 <li>
-                    <a href="#">AMCHAM Journal 에코버 대용량 공기청정 살균기 광고
+                    <a href="#">
+                    <div class="date">
+                        2023.04.XX
+                    </div>    
+                    AMCHAM Journal 에코버 대용량 공기청정 살균기 광고
                     <p>일정 규모 이상 업무 시설은 의무적으로 환기 설비를 설치해야 하는 등 공기순환기를 필요로 하는 시설들이 늘어나고 있습니다. 에코버의 공기순환기 'X1200'제품에 대한 많은 관심 부탁 드립니다. </p>
                     </a>
                 </li>
@@ -316,88 +240,12 @@
             <div class="circle3 swiper-pagination">
                 <span></span>
                 <span></span>
-                <span></span>
+                
             </div>
         </article>
     </main>
-    <!-- <footer>
-        <div class="footer1">
-            <figure>
-                <a href="./index.html"><img src="./image/main_view/logo_easylental.svg" alt="LOGO" href="./index.html"></a>
-                <figcaption><a href="http://www.easynetworks.kr/privacy.php">개인정보취급방침</a></figcaption>
-            </figure>
-            <nav>
-                <ul>
-                    <li><a href="./about.html">회사소개</a></li>
-                    <li>기업개요</li>
-                    <li>기본정보</li>
-                    <li>기업정신</li>
-                    <li>연혁</li>
-                    <li>오시는길</li>
-                </ul>
-                <ul>
-                    <li><a href="./industries.html">사업분야</a> </li>
-                    <li>종합렌탈 서비스</li>
-                    <li>공기질 관리 통합솔루션</li>
-                    <li>디지털 헬스케어</li>
-                </ul>
-                <ul>
-                    <li><a href="./publicity.html">홍보센터</a> </li>
-                    <li>홍보자료</li>
-                    <li>공지사항</li>
-                    <li>보도자료</li>
-                    <li>사회공헌</li>
-                    <li>설치사례</li>
-                </ul>
-            </nav>
-            <div class="ft_sel">
-                <select name="arrow" id="">
-                    <option value="./index.html">Family site</option>
-                    <option value="http://www.easyrental.co.kr/">이지렌탈</option>
-                    <option value="http://gagu.easyrental.co.kr/">가구렌탈</option>
-                    <option value="http://gagu.easyrental.co.kr/">OA렌탈</option>
-                    <option value="http://www.ecover.kr/default/">에코버</option>
-                </select>
-                <a href="#top"><img src="./image/about_view/top-icon.svg" alt=""></a>
-            </div>
-            
-        </div>
-        <div class="footer2">
-            <ul>
-                <li><a href="https://www.facebook.com/happy.easynetworks">Facebook</a></li>
-                <li><a href="https://www.youtube.com/channel/UCOcf_uJVyM8FHar3i9VFf3g">Youtube</a></li>
-                <li><a href="https://blog.naver.com/easynetworks">Blog</a></li>
-                <li><a href="https://pf.kakao.com/_jivqs">KakaoTalk</a></li>
-            </ul>
-            <div>
-                <b> 
-                    ㈜이지네트웍스<br>
-                    대표자: 박관병, 안진수<br>
-                    사업자등록번호: 109-81-64708 <br>
-                    대표전화: 1588-2230 <br>
-                    주소: 서울시 구로구 디지털로 288 대륭포스트타워1차(1408호) <br>
-                </b>
-                <p>
-                    Copyright(C) Easynetworks.Co., Ltd All Rights Reserved.
-                </p>
-            </div>
-        </div>
-    </footer> -->
 
-      <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: "auto",
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
 
 </body>
 </html>

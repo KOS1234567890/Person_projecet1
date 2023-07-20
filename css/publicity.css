@@ -1,22 +1,24 @@
 @import url("../css/basic.css");
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 .header {
-  background-color: rgba(240, 240, 240, 0.502);
+  background-color: rgba(240, 240, 240, 0.8);
   color: black;
   width: 100%;
   height: 7rem;
   font-size: 1rem;
   padding: 0 5rem;
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   margin: 1rem;
-  position: relative;
-  top: 0;
   margin: 0 auto;
-  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 1s;
 }
 .header ul {
   margin-left: auto;
@@ -43,6 +45,29 @@
 }
 .header .menu_m {
   display: none;
+  vertical-align: middle;
+}
+.header .menu_m ul {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+  transform: translateY(-200%);
+  transition: 1s;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.header .menu_m ul li {
+  font-size: 2rem;
+}
+
+.header.active {
+  transform: translateY(-100%);
 }
 
 main {
@@ -395,6 +420,28 @@ footer .footer2 div {
     display: block;
     font-size: 16px;
     margin-left: 1rem;
+  }
+  .header .menu_m ul {
+    width: 100%;
+  }
+  .header:hover {
+    z-index: 1;
+  }
+  .header:hover .menu_m {
+    display: block;
+    margin-left: 1rem;
+  }
+  .header:hover .menu_m ul {
+    display: block;
+    transform: translateY(0%);
+    transition: 1s;
+    opacity: 1;
+    z-index: -1;
+    font-size: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
   .main4 {
     height: auto;

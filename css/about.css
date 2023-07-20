@@ -9,22 +9,24 @@ article {
 }
 
 .header {
-  background-color: rgba(240, 240, 240, 0.502);
+  background-color: rgba(240, 240, 240, 0.8);
   color: black;
   width: 100%;
   height: 7rem;
   font-size: 1rem;
   padding: 0 5rem;
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   margin: 1rem;
-  position: relative;
-  top: 0;
   margin: 0 auto;
-  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 1s;
 }
 .header ul {
   margin-left: auto;
@@ -51,23 +53,79 @@ article {
 }
 .header .menu_m {
   display: none;
+  vertical-align: middle;
+}
+.header .menu_m ul {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+  transform: translateY(-200%);
+  transition: 1s;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.header .menu_m ul li {
+  font-size: 2rem;
+}
+
+.header.active {
+  transform: translateY(-7rem);
 }
 
 .contain_bg {
   overflow: hidden;
-  background: url("../image/about_view/company_visual2.png") no-repeat;
-  background-size: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   padding: 0 0 0 5rem;
 }
-.contain_bg b {
+.contain_bg .movetxtbg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+}
+.contain_bg .movetxtbg .bg1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../image/about_view/company_visual2.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.contain_bg .movetxtbg .txtbox {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.contain_bg .movetxtbg .txtbox b {
+  position: absolute;
   font-size: 25rem;
   white-space: nowrap;
   color: white;
   font-weight: 50;
 }
-.contain_bg p {
+.contain_bg .movetxtbg .txtbox p {
+  position: absolute;
+  top: 30rem;
+  left: 0;
   margin-left: 2rem;
   color: white;
 }
@@ -197,23 +255,58 @@ article {
 }
 
 .rotateO {
-  background: #000000 url("../image/about_view/company_typo.png") no-repeat;
+  background: rgb(240, 240, 240);
   background-size: cover;
   width: 100%;
+  height: 200vh;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.rotateO .circle {
+  color: white;
+  /* background :url('../image/main_view/mainVisual.png') no-repeat;
+  background-size: cover; */
+  width: 100%;
   height: 100vh;
+  position: fixed;
+  background: #f0f0f0;
+  left: 0;
+}
+.rotateO .circle .bg_cp {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-clip-path: circle(400px at 50% 50%);
+          clip-path: circle(400px at 50% 50%);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  background: url("../image/about_view/company_typo.png") no-repeat;
+  background-size: cover;
+}
+.rotateO .circle .center {
+  mix-blend-mode: difference;
   color: white;
+  font-size: 15rem;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-.rotateO p {
-  font-size: 8rem;
-}
-.rotateO p img {
+.rotateO .circle .center img {
   letter-spacing: 1rem;
-  width: 6rem;
+  width: 11rem;
   margin: 0;
   animation: Oro 60s infinite;
   animation-delay: 0s;
@@ -223,8 +316,9 @@ article {
     rotate: 900deg;
   }
 }
-.rotateO p b {
-  font-size: 1rem;
+.rotateO .circle .center b {
+  width: 100%;
+  font-size: 2rem;
 }
 
 .cp_think {
@@ -326,9 +420,14 @@ article {
   align-items: flex-start;
   justify-content: flex-end;
   flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 160vh;
 }
 .years .row_flex .list_party {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 50%;
   height: 160vh;
 }
@@ -353,6 +452,15 @@ article {
 .years .row_flex .list_party ul li ul li {
   font-size: 1.3rem;
   list-style: inside;
+}
+.years .row_flex .list_party .ul1, .years .row_flex .list_party .ul2, .years .row_flex .list_party .ul3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.years .row_flex .list_party ul.on {
+  display: block;
 }
 .years .row_flex .History {
   position: sticky;
@@ -394,7 +502,7 @@ article {
 .map {
   margin-top: 10rem;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
 }
 .map .map_list h2 {
   margin: 1rem 0;
@@ -530,6 +638,28 @@ footer .footer2 div {
     display: block;
     font-size: 16px;
     margin-left: 1rem;
+  }
+  .header .menu_m ul {
+    width: 100%;
+  }
+  .header:hover {
+    z-index: 1;
+  }
+  .header:hover .menu_m {
+    display: block;
+    margin-left: 1rem;
+  }
+  .header:hover .menu_m ul {
+    display: block;
+    transform: translateY(0%);
+    transition: 1s;
+    opacity: 1;
+    z-index: -1;
+    font-size: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
   .contain_bg {
     overflow: hidden;
