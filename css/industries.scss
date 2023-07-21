@@ -128,7 +128,6 @@ main{
                 position: absolute;
                 left: 50%;
                 bottom: 20%;
-                
                 display: block;
                 transform: translateY(100%);
                 color: #2F765F;
@@ -893,12 +892,36 @@ footer{
             .img_bg{
                 width: 100%;
                 height: 80%;
+                animation: Mobilebg 3s;
+            }
+            @keyframes Mobilebg{
+                0%{height: 100%;}
+                100%{height: 80%;}
             }
             .txt{
                 font-size: 1.5rem;
                 position: static;
                 margin: 4rem;
                 text-align: center;
+                color: #2F765F;
+                
+                animation: Mobiletxtup 3s 2s forwards;
+            }
+            @keyframes Mobiletxtup{
+                0%{
+                    font-size: 1.5rem;
+                    position: static;
+                    margin: 4rem;
+                    text-align: center;
+                    color: #2F765F;
+                }
+                100%{
+                    font-size: 1.5rem;
+                    position: static;
+                    margin: 4rem;
+                    text-align: center;
+                    color: white;
+                }
             }
         }
         .main3_ex{

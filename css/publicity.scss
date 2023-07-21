@@ -99,7 +99,6 @@ main{
     background-color: #F5FAF2;
     padding: 5rem;
     .main4_title{
-       
         @include flex(flex-start,flex-start){}
         h2{
             font-size: 4rem;
@@ -111,6 +110,8 @@ main{
     .main4_img{
         width: 100%;
         margin-top: 3rem;
+        animation: Main4Up 3s forwards;
+        transition: 1s;
         @include flex(normal,normal){
             flex-direction: row;
         }
@@ -125,7 +126,12 @@ main{
             p{}
         }
     }
+    @keyframes Main4Up{
+        0%{transform: translateY(10%); opacity:0.3;}
+        100%{transform: translateY(0%);}
+    }
     .bozo{
+        animation: Main4Up 3s forwards;
         width: 100%;
         position: relative;
         @include flex(normal,normal){}
@@ -133,8 +139,8 @@ main{
             position: absolute;
             top: 0%;
             left: 30%;
-            transform: translateY(-70%);
-            img{}
+            transform: translateY(-80%);
+            img{ opacity: 1;}
         }
         .bozo_p{
             width: 46%;
@@ -142,6 +148,7 @@ main{
             top: 0%;
             left: 50%;
             transform: translate(2rem, -8rem);
+            opacity: 1;
             p{font-size: 1.5rem;}
             p::before{
                 content: ">>";
@@ -155,7 +162,6 @@ main{
             position: absolute;
             top: 0%;
             right: 0%; 
-                
             img{}
         }
     }
@@ -225,12 +231,14 @@ main{
     .down_list{
         width: 100%;
         @include flex(center,space-around ){}
-        li{width: 45%;overflow: hidden;
+        li{width: 40%; height: 23vh;overflow: hidden;position:relative; border-radius: 1rem;
             img{position: absolute;
-                border-radius: 1rem;
-                width: 40%;
+                transition: 1s;
+                width: 100%;
                 height: 23vh;
+                overflow: hidden;
             }
+            
             a{
                 width: 45%;
                 p::before{
@@ -273,6 +281,9 @@ main{
                 padding-top: 10rem;
                 transform: translate(1rem,-2rem);
             }
+        }
+        li:hover img{
+            transform: scale(110%);
         }
     }
 }
@@ -509,10 +520,14 @@ footer{
             display: block;
             li{
                 position: relative;
-                width: 100%;
+                width: 90%;
                 margin-top: 2rem;
+                height: 100%;
                 img{
-                    width: 90%;
+                    width: 100%;
+                    height: 100%;
+                }
+                a{
                     height: 100%;
                 }
             }

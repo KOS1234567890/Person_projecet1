@@ -33,7 +33,7 @@ function init(){
 
     window.addEventListener('scroll',function(){
         console.log(elFix);
-        console.log(elFixEnd);
+        console.log(window.pageYOffset <= elFixEnd);
         let yy= window.pageYOffset*0.01;
         let y2=window.pageYOffset*0.05;
         let v={
@@ -75,3 +75,20 @@ elFlooryear.forEach(function(ele,key){
     }
 })
 //elFlooryear 에 잇는 span을 선택하면 list_party의 ul값을 선택할수잇음?
+
+
+//지도 누르면 연결하기
+
+const elFigmap =document.querySelectorAll('.figmap .map_fig'),
+        elMapli=document.querySelectorAll('.map_list li');
+
+let m_num=0;
+elMapli.forEach(function(ele,key){
+    ele.onclick=function(){
+        elFigmap[m_num].classList.remove('map_on');
+        elMapli[m_num].classList.add('txt_color_g');
+        elFigmap[key].classList.add('map_on');
+        elMapli[key].classList.add('txt_color_g');
+        m_num=key;
+    }
+})

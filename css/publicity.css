@@ -96,6 +96,8 @@ main {
 .main4 .main4_img {
   width: 100%;
   margin-top: 3rem;
+  animation: Main4Up 3s forwards;
+  transition: 1s;
   display: flex;
   flex-wrap: wrap;
   align-items: normal;
@@ -115,7 +117,17 @@ main {
 .main4 .main4_img .main4_text div {
   margin: 2rem 0;
 }
+@keyframes Main4Up {
+  0% {
+    transform: translateY(10%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 .main4 .bozo {
+  animation: Main4Up 3s forwards;
   width: 100%;
   position: relative;
   display: flex;
@@ -127,7 +139,10 @@ main {
   position: absolute;
   top: 0%;
   left: 30%;
-  transform: translateY(-70%);
+  transform: translateY(-80%);
+}
+.main4 .bozo .bozo_img img {
+  opacity: 1;
 }
 .main4 .bozo .bozo_p {
   width: 46%;
@@ -135,6 +150,7 @@ main {
   top: 0%;
   left: 50%;
   transform: translate(2rem, -8rem);
+  opacity: 1;
 }
 .main4 .bozo .bozo_p p {
   font-size: 1.5rem;
@@ -231,14 +247,18 @@ main {
   justify-content: space-around;
 }
 .download .down_list li {
-  width: 45%;
+  width: 40%;
+  height: 23vh;
   overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
 }
 .download .down_list li img {
   position: absolute;
-  border-radius: 1rem;
-  width: 40%;
+  transition: 1s;
+  width: 100%;
   height: 23vh;
+  overflow: hidden;
 }
 .download .down_list li a {
   width: 45%;
@@ -275,6 +295,9 @@ main {
   font-size: 1rem;
   padding-top: 10rem;
   transform: translate(1rem, -2rem);
+}
+.download .down_list li:hover img {
+  transform: scale(110%);
 }
 
 .SNS {
@@ -507,11 +530,15 @@ footer .footer2 div {
   }
   .download .down_list li {
     position: relative;
-    width: 100%;
+    width: 90%;
     margin-top: 2rem;
+    height: 100%;
   }
   .download .down_list li img {
-    width: 90%;
+    width: 100%;
+    height: 100%;
+  }
+  .download .down_list li a {
     height: 100%;
   }
   .SNS .SNS_title h2 {
