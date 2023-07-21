@@ -832,7 +832,8 @@ footer .footer2 div {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-end;
-    flex-direction: column-reverse;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
   .years .row_flex .list_party {
     position: static;

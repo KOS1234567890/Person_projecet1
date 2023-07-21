@@ -800,7 +800,8 @@ footer{
         
         .row_flex{
             @include flex(flex-start,flex-end){
-                flex-direction: column-reverse;
+                flex-direction: row;
+                flex-wrap: nowrap;
             }
             .list_party{
                 position: static;

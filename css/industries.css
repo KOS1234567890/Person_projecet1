@@ -208,6 +208,7 @@ ol li .main3_Pli .main3_Plf {
 }
 ol li .main3_Pli .main3_Plf .main3_Plf_top {
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
 }
@@ -227,14 +228,13 @@ ol li .main3_Pli .main3_Plf .main3_Plf_top .hr hr {
 ol li .main3_Pli .main3_Plf .main3_Plf_top ul {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  gap: 3rem;
   flex-wrap: nowrap;
 }
 ol li .main3_Pli .main3_Plf .main3_Plf_top ul li a {
   color: #a1a1a1;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 ol li .main3_Pli .main3_Plf .main3_Plf_bt {
   position: absolute;

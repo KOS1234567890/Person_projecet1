@@ -216,6 +216,7 @@ ol{
                 }
                 .main3_Plf_top{
                     position: absolute;
+                    width: 100%;
                     top: 0;
                     left: 0;
                     .main3_p{
@@ -227,12 +228,11 @@ ol{
                         hr{margin: 0.5rem 0; width: 40%;}
                     }
                     ul{
-                        @include flex(flex-start,flex-start){
-                            gap: 3rem;
+                        @include flex(center,flex-start){
                                 flex-wrap: nowrap;
                         }
                         li{
-                            a{ color: #a1a1a1; font-size: 1.2rem;}
+                            a{ color: #a1a1a1; font-size:0.9rem}
                         }
                     }
                 }
