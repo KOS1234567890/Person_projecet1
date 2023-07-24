@@ -87,6 +87,7 @@ main {
   border-radius: 5rem;
   background-color: #2F765F;
   overflow: hidden;
+  margin-top: 10rem;
 }
 .main3 .main3_bg .img_bg {
   width: 45%;
