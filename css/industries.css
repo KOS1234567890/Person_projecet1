@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url("./basic.css");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+html {
+  font-size: 1vw;
+}
+
 main {
   overflow: hidden;
 }

@@ -66,6 +66,10 @@
   font-size: 2rem;
 }
 
+html {
+  font-size: 1vw;
+}
+
 .header.active {
   transform: translateY(-100%);
 }
@@ -245,7 +249,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 10%;
 }
 .download .down_list li {
   width: 40%;
@@ -328,6 +333,7 @@ main {
   padding: 2rem 1rem;
 }
 .SNS .SNS_list ul li a {
+  color: black;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

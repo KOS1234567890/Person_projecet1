@@ -13,25 +13,20 @@ function init(){
     const   elcircle1 =document.querySelector('.circle'),
             elfontsize=document.querySelector('.circle p'),
             elCircle=document.querySelector('.bg_cp');
-    let num={a:0,b:0,status:true};
 
     window.addEventListener('scroll',function(){
         let yy= window.pageYOffset*0.01;
         let y2=window.pageYOffset*0.05;
         let v={
             mc:15*yy,
-            mb:100-(y2) //폰트 스케일 크기
-        };/* mc=원의 최대크기 mf=폰트 최대 사이즈*/
-        console.log(v.mb);
+            mb:100-(y2) 
+        };/* mc=원의 최대크기 mb=폰트 스케일 크기*/
         if (1.5<yy && window.pageYOffset < window.innerHeight) {
             elCircle.style=(`clip-path: circle(${v.mc}% at 50% 50%);`);
             elfontsize.style=(`transform:scale(${v.mb}%);`);
             elcircle1.style= `position: fixed; bottom:0;`;
-            /* elimgsize.style=(`width:${v.mi}vw`);
-            elB.style=(`font-size:${v.mb}rem;`); */
         }        
         else if(window.pageYOffset > window.innerHeight){
-            console.log('real');
             elcircle1.style= `position: absolute; bottom:0;`;
             return 0;
         }
