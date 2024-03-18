@@ -367,6 +367,11 @@ footer{
                     }
                     color: gray;
                 }
+                li:hover{
+                    a{
+                        color:#2F765F;
+                    }
+                }
             }
         }
         .ft_sel{

@@ -21,25 +21,46 @@ article {
   font-size: 1rem;
   padding: 0 5rem;
   z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 1rem;
   margin: 0 auto;
   position: fixed;
   left: 0;
   top: 0;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 .header ul {
   margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 0 5rem;
   gap: 3rem;
   padding: 0 1rem;
@@ -47,6 +68,9 @@ article {
 .header ul li a {
   color: #000000;
   font-weight: bold;
+}
+.header ul li a:hover {
+  color: #2F765F;
 }
 .header div select {
   vertical-align: middle;
@@ -68,19 +92,29 @@ article {
   width: 100%;
   height: 20%;
   background-color: #fff;
-  transform: translateY(-200%);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  -webkit-transition: 1s;
   transition: 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .header .menu_m ul li {
   font-size: 2rem;
 }
 
 .header.active {
-  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .rotateO {
@@ -110,10 +144,17 @@ article {
   top: 0;
   -webkit-clip-path: circle(400px at 50% 50%);
           clip-path: circle(400px at 50% 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: url("../image/main_view/mainVisual.png") no-repeat;
   background-size: cover;
 }
@@ -127,18 +168,33 @@ article {
   top: 0;
   width: 100%;
   height: 100%;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .rotateO .circle .center img {
   letter-spacing: 1rem;
   width: 11rem;
   margin: 0;
-  animation: Oro 60s infinite;
-  animation-delay: 0s;
+  -webkit-animation: Oro 60s infinite;
+          animation: Oro 60s infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+@-webkit-keyframes Oro {
+  100% {
+    rotate: 900deg;
+  }
 }
 @keyframes Oro {
   100% {
@@ -162,6 +218,8 @@ article {
   height: 100%;
 }
 .slide100 .b1 .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
   margin: 0 auto;
@@ -171,7 +229,8 @@ article {
 }
 .slide100 .b1 .swiper-wrapper article {
   width: 100%;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   height: 100%;
   margin: 0rem;
   color: white;
@@ -191,17 +250,25 @@ article {
 }
 .slide100 .b1 .swiper-wrapper article .b2 p img {
   padding-top: 3rem;
-  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 .slide100 .b1 .swiper-wrapper article span {
   margin-left: 6rem;
   font-size: 7rem;
   margin-top: 13rem;
   color: rgba(204, 204, 204, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .slide100 .b1 article:nth-of-type(2) {
   background: url("../image/main_view/easy_bg.png") no-repeat left;
@@ -233,11 +300,13 @@ article {
   background: #283593;
   height: 1px;
   border: 0;
-  transform: translateX(-8rem);
+  -webkit-transform: translateX(-8rem);
+          transform: translateX(-8rem);
 }
 .slide100 .a1 .mySwiper1 {
   width: 100%;
-  transform: translateY(75%);
+  -webkit-transform: translateY(75%);
+          transform: translateY(75%);
   overflow: hidden;
 }
 .slide100 .a1 .mySwiper3 {
@@ -249,22 +318,41 @@ article {
 }
 .slide100 .a1 .mySwiper3 .a3 {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: normal;
-  justify-content: flex-end;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .slide100 .a1 .mySwiper4 {
   overflow: hidden;
 }
 .slide100 .a1 .mySwiper4 .a4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .slide100 .a1 .mySwiper4 .a4 p img {
   -o-object-position: center;
@@ -275,7 +363,8 @@ article {
   height: 80vh;
 }
 .slide100 .a1 .swpier-wrapper {
-  transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
 }
 .slide100 .img_01 {
   position: absolute;
@@ -299,11 +388,20 @@ article {
   margin: 7rem 0;
 }
 .EASY1 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .EASY1 div a {
   color: #000000;
@@ -311,6 +409,7 @@ article {
   width: 20%;
 }
 .EASY1 div a div {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 0rem;
   overflow: hidden;
@@ -318,7 +417,8 @@ article {
 .EASY1 div a div img {
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translateX(100px);
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
 }
 .EASY1 div a hr {
   margin-top: 3rem;
@@ -327,6 +427,7 @@ article {
   font-size: 23px;
 }
 .EASY1 div a:hover div {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 10rem;
 }
@@ -351,11 +452,21 @@ article {
   top: 0;
   margin: 1rem 0;
   padding: 1rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   overflow: hidden;
 }
 .public1 ul li a::after {
@@ -366,6 +477,7 @@ article {
   top: 1rem;
 }
 .public1 ul li p {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   display: none;
   margin: 2rem;
@@ -375,6 +487,7 @@ article {
 .public1 ul li:hover p {
   padding: 1px;
   display: block;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -386,20 +499,42 @@ article {
   display: block;
 }
 .bodo1 .bodo2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .bodo1 .bodo2 span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-shrink: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 50%;
 }
 .bodo1 .bodo2 span hr {
@@ -408,11 +543,21 @@ article {
 }
 .bodo1 .bodo2 span figure {
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 1rem;
 }
 .bodo1 .bodo2 span figure img {
@@ -454,10 +599,17 @@ footer {
   font-size: 15px;
 }
 footer .footer1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 2rem 6rem 5rem;
 }
 footer .footer1 figure img {
@@ -470,10 +622,16 @@ footer .footer1 figure figcaption a {
   color: white;
 }
 footer .footer1 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   gap: 3rem;
 }
 footer .footer1 nav ul li:nth-of-type(1) {
@@ -485,6 +643,9 @@ footer .footer1 nav ul li {
 }
 footer .footer1 nav ul li a {
   color: white;
+}
+footer .footer1 nav ul li:hover a {
+  color: #2F765F;
 }
 footer .footer1 .ft_sel {
   background-color: #000000;
@@ -509,10 +670,17 @@ footer .footer1 .ft_sel img {
   margin: 0 1rem;
 }
 footer .footer2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 5rem;
 }
 footer .footer2 ul li a {
@@ -558,15 +726,24 @@ footer .footer2 div {
   }
   .header:hover .menu_m ul {
     display: block;
-    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transition: 1s;
     transition: 1s;
     opacity: 1;
     z-index: -1;
     font-size: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .rotateO {
     background-size: cover;
@@ -614,20 +791,29 @@ footer .footer2 div {
   }
   .slide100 .a1 hr {
     width: 90%;
-    transform: translateX(0rem);
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
   }
   .slide100 .a1 .mySwiper1 {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .slide100 .a1 .mySwiper1 .a4 figure img {
     padding: 3rem 1.5rem;
     width: 20rem;
   }
   .slide100 .a1 .mySwiper3 .a3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     position: static;
   }
   .slide100 .a1 .mySwiper3 .a3 p {
@@ -637,11 +823,19 @@ footer .footer2 div {
     overflow: hidden;
   }
   .slide100 .a1 .mySwiper4 .a4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .slide100 .a1 .mySwiper4 .a4 p img {
     -o-object-position: center;
@@ -655,7 +849,8 @@ footer .footer2 div {
     right: auto;
     top: auto;
     width: 100%;
-    transform: translate(50%, -50%);
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
   }
   .slide100 .img_01 img {
     padding: 1.5rem;
@@ -673,13 +868,16 @@ footer .footer2 div {
     margin-top: 50rem;
   }
   .EASY1 div {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .EASY1 div a {
     width: 40%;
   }
   .EASY1 div a div img {
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
   .EASY1 div a hr {
     margin-top: 1rem;
@@ -689,6 +887,7 @@ footer .footer2 div {
     margin-bottom: 2rem;
   }
   .EASY1 div a:hover div {
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     border-radius: 10rem;
   }
@@ -702,19 +901,40 @@ footer .footer2 div {
   }
   .bodo1 .bodo2 {
     margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .bodo1 .bodo2 span {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 45%;
   }
   .bodo1 .bodo2 span hr {
@@ -722,11 +942,21 @@ footer .footer2 div {
     margin: 3rem 0;
   }
   .bodo1 .bodo2 span figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 1rem;
   }
   .bodo1 .bodo2 span figure img {
@@ -861,6 +1091,7 @@ footer .footer2 div {
     margin-bottom: 2rem;
   }
   .EASY1 div a:hover div {
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     border-radius: 10rem;
   }
@@ -870,11 +1101,21 @@ footer .footer2 div {
   .public1 ul a li {
     gap: 1rem;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .bodo1 {
     margin-top: 5rem;
@@ -884,18 +1125,38 @@ footer .footer2 div {
     display: block;
   }
   .bodo1 .bodo2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .bodo1 .bodo2 span {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 45%;
   }
   .bodo1 .bodo2 span hr {
@@ -903,11 +1164,21 @@ footer .footer2 div {
     margin: 3rem 0;
   }
   .bodo1 .bodo2 span figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     gap: 1rem;
   }
   .bodo1 .bodo2 span figure img {

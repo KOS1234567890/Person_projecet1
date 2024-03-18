@@ -413,7 +413,6 @@ article{
             width: 50%;
             height: 160vh;
             ul{
-                
                 margin-left: 2rem;
                 li{
                     
@@ -447,7 +446,6 @@ article{
             }
             ul.on{
                 display: block;
-                
             }
         }
         .History{
@@ -468,12 +466,16 @@ article{
                 top:0; left:-7rem;
                 z-index: 10;
                 span{
+                    cursor: pointer;
                     border-bottom:1px solid #000000;
                     width: 14rem;
                     padding: 0.5rem 0;
                     @include flex(center,space-between){}
                     b{}
                     p{text-align: right; margin-right: 0;}
+                }
+                span:hover{
+                    color: #2f765f;
                 }
             }
         }
@@ -492,9 +494,19 @@ article{
             margin: 1rem 0 ;
             font-size: 2rem;
         }
+        .map_title{
+            li{
+                cursor: pointer;
+            }
+            li:hover{
+                color:#2f765f;
+            }
+        }
         ul{
             @include flex(center,flex-start){}
-            li{margin-right: 2rem; }
+            li{
+                margin-right: 2rem; 
+            }
             margin-bottom: 1rem;
         }
         .li.txt_color_g{
@@ -559,6 +571,11 @@ footer{
                     color: gray;
                     a{
                         color: white;
+                    }
+                }
+                li:hover{
+                    a{
+                        color:#2F765F;
                     }
                 }
             }

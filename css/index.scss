@@ -59,6 +59,9 @@ article{
                 font-weight:bold;
                 
             }
+            a:hover{
+                color: #2F765F;
+            }
             
         }
     }
@@ -496,6 +499,11 @@ footer{
                         color: white;
                     }
                     color: gray;
+                }
+                li:hover{
+                    a{
+                        color:#2F765F;
+                    }
                 }
             }
         }
