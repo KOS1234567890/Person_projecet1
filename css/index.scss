@@ -325,7 +325,7 @@ article{
         margin: 7rem 0;
     }
     div{
-        @include flex(center,space-around){
+        @include flex(center,space-between){
             flex-direction: row;
         }
         
@@ -339,7 +339,7 @@ article{
                     overflow: hidden;
                     img{
                         object-fit: cover;
-                        transform: translateX(100px);
+                        transform: translateX(-200px);
                     }
                 }
             hr{margin-top: 3rem; }

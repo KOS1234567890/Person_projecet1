@@ -285,7 +285,7 @@ main{
                 display: block;
                 font-size: 1rem;
                 padding-top: 10rem;
-                transform: translate(1rem,-2rem);
+                transform: translate(1rem,-3rem);
             }
         }
         li:hover img{
@@ -541,6 +541,9 @@ footer{
                 }
                 a{
                     height: 100%;
+                }
+                a::after{
+                    transform: translate(1rem,-1rem);
                 }
             }
         }
