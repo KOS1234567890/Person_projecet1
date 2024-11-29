@@ -691,7 +691,7 @@ footer .footer2 div {
   color: white;
   width: 25%;
 }
-@media (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   html {
     font-size: 1vw;
   }
@@ -788,7 +788,7 @@ footer .footer2 div {
   }
   .slide100 .a1 .mySwiper2 .a2 p {
     padding: 3rem 0 0 3rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .slide100 .a1 hr {
     width: 90%;
@@ -1025,7 +1025,7 @@ footer .footer2 div {
   }
 }
 /* 750~1280 */
-@media (max-width: 859px) {
+@media screen and (max-width: 768px) {
   h2 {
     font-size: 4rem;
   }
@@ -1049,14 +1049,85 @@ footer .footer2 div {
     margin-top: 5rem;
   }
   .slide100 .b1 article .b2 h2 {
-    font-size: 30px;
+    font-size: 24px;
   }
   .slide100 .b1 article .b2 p {
-    font-size: 20px;
+    font-size: 16px;
   }
   .slide100 .b1 article span {
     font-size: 50px;
     margin-top: 70vh;
+  }
+  .slide100 .a1 {
+    width: 100%;
+    height: 50rem;
+    background-color: rgb(210, 212, 226);
+  }
+  .slide100 .a1 .mySwiper2 .a2 {
+    padding-top: 0rem;
+  }
+  .slide100 .a1 .mySwiper2 .a2 p {
+    padding: 3rem 0 0 3rem;
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+  .slide100 .a1 hr {
+    width: 90%;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  .slide100 .a1 .mySwiper1 {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .slide100 .a1 .mySwiper1 .a4 figure img {
+    padding: 3rem 1.5rem;
+    width: 20rem;
+  }
+  .slide100 .a1 .mySwiper3 .a3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: static;
+  }
+  .slide100 .a1 .mySwiper3 .a3 p {
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
+  .slide100 .a1 .mySwiper4 {
+    overflow: hidden;
+  }
+  .slide100 .a1 .mySwiper4 .a4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .slide100 .a1 .mySwiper4 .a4 p img {
+    -o-object-position: center;
+       object-position: center;
+    padding-top: 32px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 100vw;
+    height: 25vh;
   }
   .slide100 .img_01 {
     display: none;
@@ -1073,22 +1144,24 @@ footer .footer2 div {
   .EASY1 {
     width: 80%;
     height: 100%;
+    padding-top: 5rem;
   }
   .EASY1 h2 {
     width: 100%;
     font-size: 4rem;
+    font-weight: 600;
   }
   .EASY1 div a {
-    width: 100%;
+    width: 45%;
   }
   .EASY1 div a div img {
-    height: 70vh;
+    width: 100%;
   }
   .EASY1 div a hr {
     margin-top: 1rem;
   }
   .EASY1 div a p {
-    font-size: 23px;
+    font-size: 16px;
     margin-bottom: 2rem;
   }
   .EASY1 div a:hover div {
@@ -1098,6 +1171,7 @@ footer .footer2 div {
   }
   .public1 {
     margin-top: 1rem;
+    padding-top: 5rem;
   }
   .public1 ul a li {
     gap: 1rem;

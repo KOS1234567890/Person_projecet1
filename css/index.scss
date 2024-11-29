@@ -546,10 +546,9 @@ footer{
 }
 
 
-@media (max-width:1280px) {
+@media screen and (max-width:1279px) {
     html{
         font-size: 1vw;
-        
     }
     body{
         
@@ -639,7 +638,7 @@ footer{
             .mySwiper2{
                 .a2{
                     padding-top: 0rem;
-                    p{padding: 3rem 0 0 3rem; font-size: 2rem;} 
+                    p{padding: 3rem 0 0 3rem; font-size: 2.5rem;} 
                 }             
             }
             hr{
@@ -846,7 +845,7 @@ footer{
     }
 }
 /* 750~1280 */
-@media(max-width:859px){
+@media screen and (max-width:768px){
     h2{
         font-size: 4rem;
     }
@@ -868,14 +867,15 @@ footer{
     }
     .slide100{
         .b1{
+            
             article{
                 .b2{
                     margin-top: 5rem;
                     h2{
-                        font-size: 30px;
+                        font-size: 24px;
                     }
                     p{
-                        font-size: 20px;
+                        font-size: 16px;
                     }
                 }
                 span{
@@ -883,6 +883,63 @@ footer{
                     margin-top: 70vh;
                 }
             }
+        }
+        .a1{
+            width: 100%;
+            height: 50rem;
+            background-color: rgb(210, 212, 226);
+            .mySwiper2{
+                .a2{
+                    padding-top: 0rem;
+                    p{padding: 3rem 0 0 3rem; font-size: 2.7rem;font-weight: bold;} 
+                }             
+            }
+            hr{
+                width:90%;
+                transform: translateX(0rem);
+            } 
+            .mySwiper1{
+                transform: translateY(0);
+                .a4{
+                    figure{
+                        img{
+                            padding:  3rem 1.5rem ;
+                            width: 20rem;
+                        }
+
+                    }
+                }
+
+            } 
+            .mySwiper3{
+                .a3{
+                    @include flex(center,flex-end){}
+                    position: static;
+                    p{
+                        padding: 1.5rem;
+                        font-size: 2rem;
+                    }
+                }    
+            } 
+            .mySwiper4{
+                overflow: hidden;
+                
+                .a4{
+                    @include flex(center,flex-start){
+                        flex-wrap: nowrap;
+                    }
+                    p{
+                        
+                        img{object-position: center;
+                            padding-top: 32px;
+                            object-fit: contain;
+                            width: 100vw;
+                            height: 25vh;
+                        }
+    
+                    }
+                }
+            } 
         }
         .img_01{ 
             display: none;
@@ -900,24 +957,25 @@ footer{
     .EASY1{
         width: 80%;
         height: 100%;
-        
+        padding-top: 5rem;
         h2{
             width: 100%;
             font-size: 4rem;
+            font-weight: 600;
         }
         div{
             a{
-                width: 100%;
+                width: 45%;
                 
                     div{
                         
                         img{
-                            height: 70vh;
+                            width: 100%;
                         }
                     }
                 hr{margin-top: 1rem; }
                 p{
-                    font-size: 23px;
+                    font-size: 16px;
                     margin-bottom: 2rem;
                 }
             }
@@ -937,6 +995,7 @@ footer{
     //공지사항
     .public1{
         margin-top: 1rem;
+        padding-top: 5rem;
         ul{
             
             a{
