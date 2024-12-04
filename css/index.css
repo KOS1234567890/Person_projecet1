@@ -1045,16 +1045,16 @@ footer .footer2 div {
   .rotateO p img {
     width: 8rem;
   }
-  .slide100 .b1 article .b2 {
+  .slide100 .b1 .swiper-wrapper article .b2 {
     margin-top: 5rem;
   }
-  .slide100 .b1 article .b2 h2 {
-    font-size: 24px;
+  .slide100 .b1 .swiper-wrapper article .b2 h2 {
+    font-size: 20px;
   }
-  .slide100 .b1 article .b2 p {
-    font-size: 16px;
+  .slide100 .b1 .swiper-wrapper article .b2 p {
+    font-size: 12px;
   }
-  .slide100 .b1 article span {
+  .slide100 .b1 .swiper-wrapper article span {
     font-size: 50px;
     margin-top: 70vh;
   }

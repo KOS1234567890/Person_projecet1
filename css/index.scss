@@ -867,22 +867,24 @@ footer{
     }
     .slide100{
         .b1{
-            
-            article{
-                .b2{
-                    margin-top: 5rem;
-                    h2{
-                        font-size: 24px;
+            .swiper-wrapper{
+                article{
+                    .b2{
+                        margin-top: 5rem;
+                        h2{
+                            font-size: 20px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
                     }
-                    p{
-                        font-size: 16px;
+                    span{
+                        font-size: 50px;
+                        margin-top: 70vh;
                     }
-                }
-                span{
-                    font-size: 50px;
-                    margin-top: 70vh;
                 }
             }
+            
         }
         .a1{
             width: 100%;
