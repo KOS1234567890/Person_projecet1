@@ -32,23 +32,24 @@ function init(){
         elFixEnd = elFix.y + elFix.height;
 
     window.addEventListener('scroll',function(){
+        let scrollY = window.pageYOffset;
         console.log(elFix);
-        console.log(window.pageYOffset <= elFixEnd);
-        let yy= window.pageYOffset*0.01;
-        let y2=window.pageYOffset*0.05;
+        console.log(scrollY <= elFixEnd);
+        let yy= scrollY*0.01;
+        let y2=scrollY*0.05;
         let v={
             mc:10*yy-325,
             mb:280-(y2) //폰트 스케일 크기
         };/* mc=원의 최대크기 mf=폰트 최대 사이즈*/
         
-        if (window.pageYOffset >= elFix.y && window.pageYOffset <= elFixEnd) {
+        if (scrollY >= elFix.y && scrollY <= elFixEnd) {
             elCircle.style=(`clip-path: circle(${v.mc}% at 50% 50%);`);
             elfontsize.style=(`transform:scale(${v.mb}%);`);
             elcircle1.style= `position: fixed; top:0;`;
-        }  else if(window.pageYOffset < elFix.y){
+        }  else if(scrollY < elFix.y){
             elcircle1.style=`position: absolute;`
         }
-        if(window.pageYOffset > elFixEnd){
+        if(scrollY > elFixEnd){
             elcircle1.style= `position: absolute; bottom:0; top:auto;`;
             return 0;
         }
