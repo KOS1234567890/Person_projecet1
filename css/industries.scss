@@ -36,11 +36,7 @@ main{
     position: fixed; left: 0; top: 0;
     transition: 1s;
     
-    div{
-        a{
-            img{}
-        }
-        }   
+    
     ul{
         margin-left: auto;
         @include flex(center,space-between){
@@ -67,13 +63,13 @@ main{
             background: #f0f0f080;
             color: #000000; 
             border: 1px solid #f0f0f080;
-            option{}
+            
         }
     }
     .menu_m{
         display: none; 
         vertical-align: middle;
-        p{}
+        
         ul{
             display: none; 
             position: fixed; left: 0; top: 0;
@@ -125,13 +121,6 @@ main{
         }
         .txt{
             animation: txtup 3s 2s forwards;
-            
-            h2{
-                
-            }
-            p{
-
-            }
         }
         @keyframes txtup{
             0%{
@@ -201,12 +190,6 @@ ol{
                 @include flex(center,flex-start){
                       gap: 10rem;
                     }
-                .box1_p{
-                    h1{}
-                }
-                .b1{
-                    b{}
-                }
             }
         }
         .box1::after{
@@ -273,11 +256,6 @@ ol{
                                 box-shadow: 1px .5px 3px 0 ;
                             }
                             
-                        }
-                    }
-                    .Computer_group{
-                        li{
-                            img{}
                         }
                     }
                     // .Notebook_group,.Tablet_group,.Monitor_group,.Network_group{
@@ -673,12 +651,10 @@ footer{
         div{
             color: white;
             width: 25%;
-            b{}
-            p{}
         }
     }
 }
-@media(max-width:1280px){
+@media screen and (max-width:1279px) {
     html{
         font-size: 1vw;
     }
@@ -736,16 +712,13 @@ footer{
     }
     ol{
         li{
+            
             .main3_Pli{
                 
                 .main3_Plf{
                     position: static;
                     height: 30vh;
-                    .main3_p{
-                        h1{
-                           
-                        }
-                    }
+                    
                     .main3_Plf_top{
                         margin: 2rem;
                     }
@@ -833,14 +806,7 @@ footer{
             justify-content: space-around;
             .ul_list1,.ul_list2,.ul_list3,.ul_list4,.ul_list5{
                 left:0px; margin:0;
-                .list1{
-                    
-                    // padding: 2rem;
-                    span{
-
-                    }
-                    
-                }
+                
                 .list1 > ul > li{
                     // display: none;
                     font-size: 1.3rem;
@@ -868,18 +834,7 @@ footer{
         position: relative;
         height: 45vh;
         .footer1{
-            figure{
-                a{
-                    img{
-
-                    }
-                    figcaption{
-                        a{
-
-                        }
-                    }
-                }
-            }
+            
             nav{
                 display: none;
             }
@@ -918,9 +873,9 @@ footer{
     }
 }
 //1168
-@media(max-width:859px){
+@media screen and (max-width:768px){
     html{
-        font-size: 1vw;
+        font-size: 2vw;
     }
     .header{
         font-size: 0.8rem;
@@ -978,13 +933,13 @@ footer{
     ol{
         li{
             .main3_Pli{
-                
+                height: 130vh;
                 .main3_Plf{
                     position: static;
                     height: 30vh;
                     .main3_Plf_bt{
                         ul{
-                            flex-wrap: nowrap;
+                            flex-wrap: wrap;
                         }
                     } 
                 }
@@ -1000,6 +955,7 @@ footer{
                         width: 70vh;
                         position: static;
                         img{
+                            width: 75%;
                             transform: translateX(15%);
                         }
                     }
@@ -1071,18 +1027,7 @@ footer{
         height: 45vh;
         .footer1{
             padding-top: 5rem;
-            figure{
-                a{
-                    img{
-
-                    }
-                    figcaption{
-                        a{
-
-                        }
-                    }
-                }
-            }
+            
             nav{
                 display: none;
             }

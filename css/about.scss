@@ -17,7 +17,7 @@ main{
     // overflow: hidden;
 }
 html{
-    font-size: 1vw;
+    // font-size: 1vw;
 }
 article{
     margin: 0 5rem;
@@ -617,7 +617,7 @@ footer{
         }
     }
 }
-@media (max-width:1280px) {
+@media screen and (max-width:1279px) {
     html{
         font-size: 1vw;
     }
@@ -726,10 +726,17 @@ footer{
         }
     }
     .rotateO{
-        p{
+        .circle{
             font-size: 4rem;
-            img{
-                width: 3rem;
+            .bg_cp{
+            }
+            .center{
+                img{
+                    //width: 3rem;
+                }
+                b{
+
+                }
             }
         }
     }
@@ -969,9 +976,9 @@ footer{
         }
     }
 }
-@media(max-width:859px){
+@media screen and (max-width:768px){
     html{
-        font-size: 1vw;
+        font-size: 1.5vw;
     }
     body{
         

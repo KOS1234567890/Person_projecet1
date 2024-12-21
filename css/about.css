@@ -4,10 +4,6 @@ body {
   margin: 0 auto;
 }
 
-html {
-  font-size: 1vw;
-}
-
 article {
   margin: 0 5rem;
 }
@@ -826,7 +822,7 @@ footer .footer2 div {
   color: white;
   width: 25%;
 }
-@media (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
   html {
     font-size: 1vw;
   }
@@ -937,11 +933,8 @@ footer .footer2 div {
     height: 36%;
     right: 4rem;
   }
-  .rotateO p {
+  .rotateO .circle {
     font-size: 4rem;
-  }
-  .rotateO p img {
-    width: 3rem;
   }
   .cp_think {
     display: -webkit-box;
@@ -1192,9 +1185,9 @@ footer .footer2 div {
     color: gray;
   }
 }
-@media (max-width: 859px) {
+@media screen and (max-width: 768px) {
   html {
-    font-size: 1vw;
+    font-size: 1.5vw;
   }
   .header {
     font-size: 0.8rem;

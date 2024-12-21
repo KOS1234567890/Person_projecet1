@@ -922,7 +922,8 @@ footer .footer2 div {
   color: white;
   width: 25%;
 }
-@media (max-width: 1280px) {
+
+@media screen and (max-width: 1279px) {
   html {
     font-size: 1vw;
   }
@@ -1121,9 +1122,9 @@ footer .footer2 div {
     color: gray;
   }
 }
-@media (max-width: 859px) {
+@media screen and (max-width: 768px) {
   html {
-    font-size: 1vw;
+    font-size: 2vw;
   }
   .header {
     font-size: 0.8rem;
@@ -1208,13 +1209,16 @@ footer .footer2 div {
   .main3 .main3_ex .main3_ex1 {
     width: 100%;
   }
+  ol li .main3_Pli {
+    height: 130vh;
+  }
   ol li .main3_Pli .main3_Plf {
     position: static;
     height: 30vh;
   }
   ol li .main3_Pli .main3_Plf .main3_Plf_bt ul {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   ol li .main3_Pli .main3_Prg {
     position: static;
@@ -1228,6 +1232,7 @@ footer .footer2 div {
     position: static;
   }
   ol li .main3_Pli .main3_Prg .main3_Prg_bottom img {
+    width: 75%;
     -webkit-transform: translateX(15%);
             transform: translateX(15%);
   }

@@ -5,11 +5,11 @@ const widthscroll =document.querySelector('.txtbox b'),
       elconbg=document.querySelector('.contain_bg'),
       elmovetb=document.querySelector('.movetxtbg');
 window.addEventListener("scroll",function() {
-    
-    let yyy= window.pageYOffset*0.1;
+    let scrollY = window.pageYOffset;
+    let yyy= scrollY*0.135;
     console.log(yyy);
     
-    if(window.pageYOffset < window.innerHeight){
+    if(scrollY < window.innerHeight){
         elmovetb.style=`position: fixed; bottom:0;`;
         widthscroll.style=(`transform:translateX(-${yyy}rem)`)
     }
@@ -54,7 +54,7 @@ function init(){
             return 0;
         }
     })
-  
+    
 }
 window.addEventListener('load',init)
 
